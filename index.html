@@ -1,0 +1,3290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Point Conversion Table</title>
+<link rel="icon" href="data:,">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Point Ledger">
+<meta name="theme-color" content="#12111B">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+  :root {
+    --bg: #12111B;
+    --panel: #1C1A28;
+    --panel-2: #22203180;
+    --border: #322C46;
+    --gold: #C9A961;
+    --gold-soft: #E3C98A;
+    --cream: #EDE7DA;
+    --muted: #8B8598;
+    --green: #8FBB8A;
+    --rose: #D98080;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    padding: 20px 14px 60px;
+    padding-top: max(20px, env(safe-area-inset-top));
+    padding-bottom: max(60px, env(safe-area-inset-bottom));
+  }
+  .gothic { font-family: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif; }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .header-title { font-size: 20px; font-weight: 700; letter-spacing: 0.04em; }
+  .header-title-row { display: flex; align-items: center; justify-content: space-between; }
+  .header-title-sub { font-size: 28px; font-weight: 700; color: var(--cream); letter-spacing: 0.06em; white-space: nowrap; flex-shrink: 0; }
+  .header-right-controls { display: flex; align-items: center; gap: 10px; }
+  .save-indicator { font-size: 11px; color: var(--muted); text-align: right; }
+  .menu-wrap { position: relative; }
+  .menu-btn { background: transparent; border: none; color: var(--gold-soft); padding: 6px 4px; font-size: 20px; line-height: 1; cursor: pointer; }
+  .menu-dropdown { display: none; position: absolute; top: 100%; right: 0; margin-top: 8px; min-width: 170px; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: 0 10px 24px rgba(0,0,0,0.5); z-index: 50; }
+  .menu-dropdown.open { display: block; }
+  .menu-item { display: block; width: 100%; box-sizing: border-box; text-align: left; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--gold-soft); padding: 11px 14px; font-size: 13px; cursor: pointer; font-family: inherit; }
+  .menu-item:last-child { border-bottom: none; }
+  .menu-item:active { background: var(--panel-2); }
+
+  .share-card { background: #ffffff; border-radius: 16px; padding: 30px 20px 24px; display: flex; flex-direction: column; align-items: center; margin-bottom: 14px; }
+  .share-qr-wrap svg { display: block; }
+  .share-qr-wrap path { fill: #A9843C; }
+  .share-brand { display: flex; align-items: center; gap: 14px; margin-top: 20px; width: 100%; justify-content: center; }
+  .share-line { flex: 1; max-width: 64px; height: 1px; background: #A9843C; opacity: 0.55; }
+  .share-brand-text { font-family: Georgia, 'Times New Roman', serif; font-size: 16px; letter-spacing: 0.22em; color: #A9843C; white-space: nowrap; }
+
+  .customer-list { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+  .customer-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; cursor: pointer; }
+  .customer-row-name { font-size: 14px; color: var(--cream); }
+  .customer-row-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .customer-row-chevron { color: var(--muted); font-size: 14px; }
+  .customer-empty { text-align: center; color: var(--muted); font-size: 12px; padding: 20px 0; }
+  .excluded-section { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; }
+  .excluded-toggle-btn { width: 100%; background: transparent; border: none; color: var(--muted); font-size: 12px; text-align: left; padding: 4px 2px; cursor: pointer; font-family: inherit; }
+  .excluded-section .customer-list { margin-top: 8px; opacity: 0.7; }
+  .excluded-section .customer-row { border-style: dashed; }
+
+  .small-back-btn { background: none; border: none; color: var(--gold-soft); font-size: 13px; padding: 2px 0 18px; text-align: left; cursor: pointer; }
+  .cf-field { margin-bottom: 12px; }
+  .cf-row { display: flex; gap: 10px; }
+  .cf-row .cf-field { flex: 1; min-width: 0; }
+  .cf-label { display: block; font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+  .cf-input { width: 100%; min-width: 0; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; padding: 9px 10px; font-size: 16px; color: var(--cream); box-sizing: border-box; font-family: inherit; }
+  .cf-md-row { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+  .cf-select { width: auto; flex: 1; min-width: 0; appearance: none; -webkit-appearance: none; background-image: none; }
+  .cf-md-sep { font-size: 13px; color: var(--muted); flex-shrink: 0; }
+  .cf-picker-wrap { position: relative; }
+  .cf-picker-btn { text-align: left; cursor: pointer; color: var(--cream); }
+  .cf-picker-popup { position: absolute; top: 100%; left: 0; right: 0; margin-top: 6px; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 10px; z-index: 40; box-shadow: 0 8px 20px rgba(0,0,0,0.45); }
+  .cf-picker-done { width: 100%; justify-content: center; margin-bottom: 0; }
+  .cf-birthday-sep { font-size: 13px; color: var(--muted); flex-shrink: 0; }
+  .cf-textarea { min-height: 64px; resize: vertical; }
+  .cf-actions { display: flex; gap: 8px; margin-bottom: 6px; }
+  .cf-actions .backup-action { flex: 1; }
+  .cf-exclude-toggle { width: 100%; justify-content: flex-start; margin-bottom: 6px; }
+  .ghost-btn.danger { color: var(--rose); border-color: var(--rose); }
+
+  .customer-stats { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
+  .customer-stats-title { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 13px; color: var(--gold-soft); margin-bottom: 10px; }
+  .cs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+  .cs-chip { background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 8px 6px; text-align: center; }
+  .cs-chip-value { font-size: 14px; font-weight: 700; color: var(--cream); }
+  .cs-chip-label { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .cs-ratio-row { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--muted); margin-bottom: 5px; }
+  .cs-ratio-label { width: 42px; flex-shrink: 0; color: var(--cream); }
+  .cs-ratio-bar { flex: 1; height: 6px; border-radius: 4px; background: var(--panel-2); overflow: hidden; }
+  .cs-ratio-fill { height: 100%; background: var(--gold); }
+  .cs-ratio-pct { width: 34px; flex-shrink: 0; text-align: right; }
+
+  .backup-section { margin-bottom: 18px; }
+  .backup-section-title { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 13px; color: var(--gold-soft); margin-bottom: 4px; }
+  .backup-desc { font-size: 11px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+  .backup-action { width: 100%; justify-content: center; }
+  .backup-status { font-size: 12px; color: var(--green); text-align: center; min-height: 16px; }
+  .backup-status.error { color: var(--rose); }
+
+  .month-nav { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 16px; }
+  .month-nav-label { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 17px; letter-spacing: 0.06em; min-width: 120px; text-align: center; }
+  .period-range-label { font-size: 11px; color: var(--muted); text-align: center; margin-top: 2px; }
+
+  .calendar-card {
+    background: linear-gradient(160deg, #241f33 0%, #1a1725 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 16px 16px;
+    margin-bottom: 20px;
+  }
+  .calendar { margin-bottom: 12px; }
+  .cal-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+  .cal-weekday.sun { color: var(--rose); }
+  .cal-weekday.sat { color: var(--gold-soft); }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+  .cal-cell { position: relative; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--cream); font-size: 13px; font-family: 'Zen Kaku Gothic New', sans-serif; padding: 0; }
+  .cal-cell.empty { background: transparent; border-color: transparent; }
+  .cal-cell.recorded { border-color: var(--gold); color: var(--gold-soft); }
+  .cal-cell.worked { background: var(--gold); border-color: var(--gold); color: #1C1A28; font-weight: 700; }
+  .cal-cell.today { box-shadow: 0 0 0 2px var(--gold-soft) inset; }
+  .cal-event-dots { position: absolute; bottom: 3px; left: 50%; transform: translateX(-50%); display: flex; gap: 3px; }
+  .cal-event-dot { width: 5px; height: 5px; border-radius: 50%; }
+  .cal-event-dot.birthday { background: var(--rose); }
+  .cal-event-dot.met { background: var(--cream); box-shadow: 0 0 0 1px var(--panel); }
+  .calendar-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 10px; color: var(--muted); }
+  .cal-legend-item { display: inline-flex; align-items: center; gap: 5px; }
+  .cal-legend-swatch { width: 10px; height: 10px; border-radius: 3px; display: inline-block; border: 1px solid var(--border); }
+  .cal-legend-swatch.worked { background: var(--gold); border-color: var(--gold); }
+  .cal-legend-swatch.recorded { background: transparent; border-color: var(--gold); }
+  .cal-legend-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+  .cal-legend-dot.birthday { background: var(--rose); }
+  .cal-legend-dot.met { background: var(--cream); box-shadow: 0 0 0 1px var(--panel); }
+  .calendar-hint { font-size: 10px; color: var(--muted); opacity: 0.75; margin-top: 6px; }
+  .anniversary-list { display: flex; flex-direction: column; gap: 6px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); }
+  .anniversary-item { display: flex; align-items: center; gap: 8px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; font-size: 12px; color: var(--cream); cursor: pointer; }
+  .anniversary-date { color: var(--gold-soft); font-size: 13px; min-width: 30px; }
+  .anniversary-name { flex: 1; }
+  .anniversary-kind { font-size: 10px; color: var(--muted); }
+
+  .summary-card {
+    position: relative;
+    background: linear-gradient(160deg, #241f33 0%, #1a1725 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 18px 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .glass-icon { position: absolute; top: 10px; right: 10px; width: 56px; height: 56px; color: var(--gold); opacity: 0.35; }
+  .summary-eyebrow { font-size: 11px; letter-spacing: 0.14em; color: var(--gold-soft); margin-bottom: 6px; }
+  .summary-main { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+  .summary-main-value { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 46px; font-weight: 700; color: var(--gold-soft); line-height: 1; }
+  .summary-main-unit { font-size: 14px; color: var(--muted); }
+  .summary-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+  .summary-next { display: inline-flex; align-items: center; gap: 6px; background: #2a2438; border: 1px solid var(--gold); border-radius: 8px; padding: 5px 10px; font-size: 11px; color: var(--gold-soft); margin-bottom: 14px; }
+  .summary-next.done { background: transparent; border-color: var(--green); color: var(--green); }
+  .summary-next-strong { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 13px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .stat-chip { background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 8px 6px; text-align: center; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 0.08s ease, border-color 0.08s ease; }
+  .stat-chip:active { transform: scale(0.96); border-color: var(--gold); }
+  .stat-chip-value { font-size: 15px; font-weight: 700; color: var(--cream); }
+  .stat-chip-unit { font-size: 10px; color: var(--muted); margin-left: 2px; }
+  .stat-chip-label { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+  .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(8, 7, 12, 0.7); z-index: 50; align-items: flex-end; justify-content: center; }
+  .modal-backdrop.open { display: flex; }
+  .modal-panel { background: var(--panel); border: 1px solid var(--border); border-bottom: none; border-radius: 18px 18px 0 0; width: 100%; max-width: 520px; max-height: 78vh; overflow-y: auto; padding: 16px 16px calc(16px + env(safe-area-inset-bottom)); }
+  .modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+  .modal-title { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 16px; color: var(--gold-soft); letter-spacing: 0.03em; }
+  .modal-sum { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+  .modal-note { font-size: 10px; color: var(--muted); margin-bottom: 10px; line-height: 1.5; }
+  .modal-list { display: flex; flex-direction: column; }
+  .breakdown-row { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); }
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-date { font-size: 11px; color: var(--muted); min-width: 52px; }
+  .breakdown-name { flex: 1; font-size: 13px; color: var(--cream); }
+  .breakdown-value { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 13px; color: var(--gold-soft); white-space: nowrap; }
+  .breakdown-empty { text-align: center; color: var(--muted); font-size: 12px; padding: 24px 0; }
+
+  .day-card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+  .day-card.off { opacity: 0.55; }
+  .day-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  .day-head-left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .day-date { background: transparent; border: none; color: var(--cream); font-family: 'Noto Sans JP', sans-serif; font-size: 13px; }
+  .day-weekday { font-size: 11px; color: var(--muted); background: #322C4650; padding: 2px 7px; border-radius: 6px; }
+  .day-weekday.weekend { color: var(--rose); }
+  .nibu-tag { font-size: 10px; color: var(--gold-soft); border: 1px solid var(--gold); border-radius: 6px; padding: 1px 6px; }
+  .draft-tag { font-size: 10px; color: var(--muted); border: 1px dashed var(--border); border-radius: 6px; padding: 1px 6px; }
+  .day-head-right { display: flex; align-items: center; gap: 10px; }
+  .day-total { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 16px; color: var(--gold-soft); }
+  .icon-btn { background: transparent; border: none; color: var(--muted); cursor: pointer; padding: 4px; font-size: 15px; }
+  .day-body { padding: 12px; }
+  .day-meta-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; align-items: flex-end; }
+
+  .field { display: flex; flex-direction: column; gap: 3px; }
+  .field-label { font-size: 10px; color: var(--muted); }
+  .field-input-wrap { display: flex; align-items: center; background: #14121e; border: 1px solid var(--border); border-radius: 8px; padding: 5px 8px; }
+  .field-input { background: transparent; border: none; color: var(--cream); width: 56px; font-size: 13px; font-family: 'Noto Sans JP', sans-serif; }
+  .field-input:focus { outline: none; }
+  .field-suffix { font-size: 10px; color: var(--muted); }
+
+  .toggle { display: flex; align-items: center; gap: 6px; background: #14121e; border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; cursor: pointer; color: var(--muted); }
+  .toggle-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+  .toggle.on { border-color: var(--gold); color: var(--cream); }
+  .toggle.on .toggle-dot { background: var(--gold); }
+  .toggle-label { font-size: 12px; }
+  .toggle-points { font-size: 11px; margin-left: 2px; color: var(--gold-soft); }
+
+  .customer-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; }
+  .customer-card { background: #171522; border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
+  .customer-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .customer-name-wrap { position: relative; flex: 1; min-width: 0; }
+  .customer-name { width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--cream); font-size: 16px; padding: 4px 2px; font-family: 'Noto Sans JP', sans-serif; }
+  .customer-name:focus { outline: none; border-color: var(--gold); }
+  .customer-name-suggest { position: absolute; top: 100%; left: 0; right: 0; margin-top: 4px; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; max-height: 168px; overflow-y: auto; z-index: 30; box-shadow: 0 6px 16px rgba(0,0,0,0.45); }
+  .customer-name-suggest-item { padding: 9px 10px; font-size: 13px; color: var(--cream); border-bottom: 1px solid var(--border); }
+  .customer-name-suggest-item:last-child { border-bottom: none; }
+  .customer-name-suggest-item:active { background: var(--panel-2); }
+  .customer-sum { font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 14px; color: var(--gold-soft); white-space: nowrap; }
+  .type-row { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+  .type-chip { flex: 1; min-width: 56px; background: #14121e; border: 1px solid var(--border); color: var(--muted); border-radius: 8px; padding: 6px 4px; font-size: 12px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 1px; }
+  .type-chip-pt { font-size: 9px; opacity: 0.8; }
+  .type-chip.on { border-color: var(--gold); color: var(--gold-soft); background: #2a2438; }
+  .customer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .shukyaku-badge { margin-top: 8px; display: inline-block; font-size: 10px; color: var(--green); border: 1px solid var(--green); border-radius: 6px; padding: 2px 6px; }
+
+  .day-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .ghost-btn { display: flex; align-items: center; gap: 5px; background: transparent; border: 1px dashed var(--border); color: var(--gold-soft); border-radius: 8px; padding: 7px 12px; font-size: 12px; cursor: pointer; }
+  .ghost-btn.danger { color: var(--rose); }
+
+  .day-subtotal-strip { display: flex; flex-wrap: wrap; gap: 10px; font-size: 10px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; }
+
+  .add-day-btn { width: 100%; background: var(--panel); border: 1px solid var(--gold); color: var(--gold-soft); border-radius: 12px; padding: 12px; font-size: 13px; display: flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer; margin-top: 6px; }
+
+  .empty-state { text-align: center; color: var(--muted); font-size: 13px; padding: 30px 10px; border: 1px dashed var(--border); border-radius: 12px; margin-bottom: 14px; }
+
+  .footnote { font-size: 10px; color: var(--muted); text-align: center; margin-top: 18px; line-height: 1.6; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-title-row">
+      <div class="header-title-sub gothic">POINT LEDGER</div>
+      <div class="header-right-controls">
+        <div class="save-indicator" id="saveIndicator"></div>
+        <div class="menu-wrap">
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <div class="menu-dropdown" id="menuDropdown">
+            <button class="menu-item" id="openCustomersBtn" type="button">👤 顧客リスト</button>
+            <button class="menu-item" id="openShareBtn" type="button">🔗 共有</button>
+            <button class="menu-item" id="openBackupBtn" type="button">⇅ バックアップ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-card">
+    <svg viewBox="0 0 64 64" class="glass-icon" aria-hidden="true">
+      <g opacity="0.5">
+        <path d="M20 6 L44 6 L37 30 Q32 34 27 30 Z" fill="none" stroke="currentColor" stroke-width="1.3" />
+        <line x1="32" y1="32" x2="32" y2="48" stroke="currentColor" stroke-width="1.3" />
+        <line x1="22" y1="50" x2="42" y2="50" stroke="currentColor" stroke-width="1.3" />
+        <path d="M12 6 L28 6 L23 22 Q18 25 14 22 Z" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6" />
+        <path d="M36 6 L52 6 L47 22 Q42 25 38 22 Z" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6" />
+      </g>
+    </svg>
+    <div class="summary-eyebrow" id="summaryEyebrow">今月の換算</div>
+    <div class="summary-main">
+      <span class="summary-main-value gothic" id="conversionValue">0.0</span>
+      <span class="summary-main-unit" id="conversionUnit">換算 / 出勤0日</span>
+    </div>
+    <div class="summary-sub" id="summarySub">合計 0.0pt（うちワイン 0.0pt）</div>
+    <div class="summary-next" id="summaryNext"></div>
+    <div class="stat-grid" id="statGrid"></div>
+  </div>
+
+  <div class="calendar-card" id="calendarCard">
+    <div class="month-nav">
+      <div>
+        <div class="month-nav-label gothic" id="monthLabel"></div>
+        <div class="period-range-label" id="periodRangeLabel"></div>
+      </div>
+    </div>
+
+    <div class="calendar" id="calendarWrap"></div>
+
+    <div class="calendar-legend">
+      <span class="cal-legend-item"><span class="cal-legend-swatch worked"></span>出勤日</span>
+      <span class="cal-legend-item"><span class="cal-legend-swatch recorded"></span>記録あり</span>
+      <span class="cal-legend-item"><span class="cal-legend-dot birthday"></span>🎂 誕生日</span>
+      <span class="cal-legend-item"><span class="cal-legend-dot met"></span>🎉 出会った日</span>
+    </div>
+    <div class="calendar-hint">日付をタップすると情報を追加・編集できます</div>
+
+    <div class="anniversary-list" id="anniversaryList" style="display:none;"></div>
+  </div>
+
+  <div id="dayPanel"></div>
+
+  <datalist id="customerNamesList"></datalist>
+
+  <div class="footnote">
+    ワインは月内合計額から4万円ごとに2.0ptで自動計算されます（端数切り捨て）。<br>
+    換算は 合計pt ÷ 出勤日数 を0.5pt単位に切り捨てて算出しています。<br>
+    入力内容はこの端末のブラウザに月ごと自動保存されます（このページ単体で完結します）。
+  </div>
+
+  <div class="modal-backdrop" id="breakdownBackdrop">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div class="modal-title gothic" id="breakdownTitle"></div>
+        <button class="icon-btn" id="breakdownClose">✕</button>
+      </div>
+      <div class="modal-sum" id="breakdownSum"></div>
+      <div class="modal-note" id="breakdownNote"></div>
+      <div class="modal-list" id="breakdownList"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="backupBackdrop">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div class="modal-title gothic">バックアップ</div>
+        <button class="icon-btn" id="backupClose">✕</button>
+      </div>
+      <div class="backup-section">
+        <div class="backup-section-title">書き出す</div>
+        <div class="backup-desc">今までの全月分の記録を1つのファイルに保存します。定期的に(特にiPhoneの設定を色々いじった後は)書き出しておくと安心です。</div>
+        <button class="ghost-btn backup-action" id="exportBtn">⇩ バックアップファイルを書き出す</button>
+      </div>
+      <div class="backup-section">
+        <div class="backup-section-title">読み込む</div>
+        <div class="backup-desc">書き出しておいたバックアップファイルから、記録を復元します。現在保存されているデータには追記されます(上書きされるのは同じ日付・月のデータのみです)。</div>
+        <button class="ghost-btn backup-action" id="importBtn">⇧ バックアップファイルを読み込む</button>
+        <input type="file" id="importFile" accept="application/json,.json" style="display:none;">
+      </div>
+      <div class="backup-status" id="backupStatus"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="shareBackdrop">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div class="modal-title gothic">共有</div>
+        <button class="icon-btn" id="shareClose">✕</button>
+      </div>
+      <div class="share-card">
+        <div class="share-qr-wrap" id="shareQrWrap"></div>
+        <div class="share-brand">
+          <span class="share-line"></span>
+          <span class="share-brand-text">the suite pt</span>
+          <span class="share-line"></span>
+        </div>
+      </div>
+      <div class="backup-desc" style="text-align:center;">このQRコードを読み取ると、このページが開きます。スクリーンショットにして送るだけで共有できます。</div>
+      <button class="ghost-btn backup-action" id="shareCopyUrlBtn">🔗 URLをコピーする</button>
+      <button class="ghost-btn backup-action" id="shareNativeBtn" style="display:none;">↑ 共有する</button>
+      <div class="backup-status" id="shareStatus"></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="customersBackdrop">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div class="modal-title gothic">顧客リスト</div>
+        <button class="icon-btn" id="customersClose">✕</button>
+      </div>
+
+      <div id="customerListView">
+        <button class="ghost-btn backup-action" id="addCustomerBtn">＋ 顧客を追加</button>
+        <div class="customer-list" id="customerListEl"></div>
+        <div class="excluded-section" id="excludedSection" style="display:none;">
+          <button type="button" class="excluded-toggle-btn" id="excludedToggleBtn">除外リスト（<span id="excludedCount">0</span>） <span id="excludedChevron">▸</span></button>
+          <div class="customer-list" id="excludedListEl" style="display:none;"></div>
+        </div>
+      </div>
+
+      <div id="customerDetailView" style="display:none;">
+        <button class="ghost-btn small-back-btn" id="customerBackBtn">‹ 一覧に戻る</button>
+        <div class="cf-row">
+          <div class="cf-field">
+            <label class="cf-label">ニックネーム</label>
+            <input class="cf-input" id="cfNickname" placeholder="はなちゃん">
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">フルネーム</label>
+            <input class="cf-input" id="cfFullName" placeholder="山田 花子">
+          </div>
+        </div>
+        <div class="cf-row">
+          <div class="cf-field">
+            <label class="cf-label">出会った日</label>
+            <div class="cf-picker-wrap">
+              <button type="button" class="cf-input cf-picker-btn" id="cfMetBtn">選択してください</button>
+              <div class="cf-picker-popup" id="cfMetPopup" style="display:none;">
+                <div class="cf-md-row">
+                  <select class="cf-input cf-select" id="cfMetYear">
+                    <option value="">年</option>
+                  </select>
+                  <span class="cf-md-sep">年</span>
+                </div>
+                <div class="cf-md-row">
+                  <select class="cf-input cf-select" id="cfMetMonth">
+                    <option value="">月</option>
+                  </select>
+                  <span class="cf-md-sep">月</span>
+                  <select class="cf-input cf-select" id="cfMetDay">
+                    <option value="">日</option>
+                  </select>
+                  <span class="cf-md-sep">日</span>
+                </div>
+                <button type="button" class="ghost-btn cf-picker-done" id="cfMetDoneBtn">決定</button>
+              </div>
+            </div>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">お誕生日</label>
+            <div class="cf-picker-wrap">
+              <button type="button" class="cf-input cf-picker-btn" id="cfBirthdayBtn">選択してください</button>
+              <div class="cf-picker-popup" id="cfBirthdayPopup" style="display:none;">
+                <div class="cf-md-row">
+                  <select class="cf-input cf-select" id="cfBirthdayMonth">
+                    <option value="">月</option>
+                  </select>
+                  <span class="cf-md-sep">月</span>
+                  <select class="cf-input cf-select" id="cfBirthdayDay">
+                    <option value="">日</option>
+                  </select>
+                  <span class="cf-md-sep">日</span>
+                </div>
+                <button type="button" class="ghost-btn cf-picker-done" id="cfBirthdayDoneBtn">決定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cf-field">
+          <label class="cf-label">メモ</label>
+          <textarea class="cf-input cf-textarea" id="cfMemo" placeholder="好きなお酒、話題、注意点など"></textarea>
+        </div>
+        <div class="cf-field">
+          <button type="button" class="toggle cf-exclude-toggle" id="cfExcludedToggle">
+            <span class="toggle-dot"></span>
+            <span class="toggle-label">除外リストに入れる（情報はそのまま残ります）</span>
+          </button>
+        </div>
+        <div class="cf-actions">
+          <button class="ghost-btn backup-action" id="cfSaveBtn">保存する</button>
+          <button class="ghost-btn backup-action danger" id="cfDeleteBtn">削除する</button>
+        </div>
+
+        <div class="customer-stats" id="customerStatsEl"></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+//---------------------------------------------------------------------
+//
+// QR Code Generator for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//  http://www.opensource.org/licenses/mit-license.php
+//
+// The word 'QR Code' is registered trademark of
+// DENSO WAVE INCORPORATED
+//  http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+
+var qrcode = function() {
+
+  //---------------------------------------------------------------------
+  // qrcode
+  //---------------------------------------------------------------------
+
+  /**
+   * qrcode
+   * @param typeNumber 1 to 40
+   * @param errorCorrectionLevel 'L','M','Q','H'
+   */
+  var qrcode = function(typeNumber, errorCorrectionLevel) {
+
+    var PAD0 = 0xEC;
+    var PAD1 = 0x11;
+
+    var _typeNumber = typeNumber;
+    var _errorCorrectionLevel = QRErrorCorrectionLevel[errorCorrectionLevel];
+    var _modules = null;
+    var _moduleCount = 0;
+    var _dataCache = null;
+    var _dataList = new Array();
+
+    var _this = {};
+
+    var makeImpl = function(test, maskPattern) {
+
+      _moduleCount = _typeNumber * 4 + 17;
+      _modules = function(moduleCount) {
+        var modules = new Array(moduleCount);
+        for (var row = 0; row < moduleCount; row += 1) {
+          modules[row] = new Array(moduleCount);
+          for (var col = 0; col < moduleCount; col += 1) {
+            modules[row][col] = null;
+          }
+        }
+        return modules;
+      }(_moduleCount);
+
+      setupPositionProbePattern(0, 0);
+      setupPositionProbePattern(_moduleCount - 7, 0);
+      setupPositionProbePattern(0, _moduleCount - 7);
+      setupPositionAdjustPattern();
+      setupTimingPattern();
+      setupTypeInfo(test, maskPattern);
+
+      if (_typeNumber >= 7) {
+        setupTypeNumber(test);
+      }
+
+      if (_dataCache == null) {
+        _dataCache = createData(_typeNumber, _errorCorrectionLevel, _dataList);
+      }
+
+      mapData(_dataCache, maskPattern);
+    };
+
+    var setupPositionProbePattern = function(row, col) {
+
+      for (var r = -1; r <= 7; r += 1) {
+
+        if (row + r <= -1 || _moduleCount <= row + r) continue;
+
+        for (var c = -1; c <= 7; c += 1) {
+
+          if (col + c <= -1 || _moduleCount <= col + c) continue;
+
+          if ( (0 <= r && r <= 6 && (c == 0 || c == 6) )
+              || (0 <= c && c <= 6 && (r == 0 || r == 6) )
+              || (2 <= r && r <= 4 && 2 <= c && c <= 4) ) {
+            _modules[row + r][col + c] = true;
+          } else {
+            _modules[row + r][col + c] = false;
+          }
+        }
+      }
+    };
+
+    var getBestMaskPattern = function() {
+
+      var minLostPoint = 0;
+      var pattern = 0;
+
+      for (var i = 0; i < 8; i += 1) {
+
+        makeImpl(true, i);
+
+        var lostPoint = QRUtil.getLostPoint(_this);
+
+        if (i == 0 || minLostPoint > lostPoint) {
+          minLostPoint = lostPoint;
+          pattern = i;
+        }
+      }
+
+      return pattern;
+    };
+
+    var setupTimingPattern = function() {
+
+      for (var r = 8; r < _moduleCount - 8; r += 1) {
+        if (_modules[r][6] != null) {
+          continue;
+        }
+        _modules[r][6] = (r % 2 == 0);
+      }
+
+      for (var c = 8; c < _moduleCount - 8; c += 1) {
+        if (_modules[6][c] != null) {
+          continue;
+        }
+        _modules[6][c] = (c % 2 == 0);
+      }
+    };
+
+    var setupPositionAdjustPattern = function() {
+
+      var pos = QRUtil.getPatternPosition(_typeNumber);
+
+      for (var i = 0; i < pos.length; i += 1) {
+
+        for (var j = 0; j < pos.length; j += 1) {
+
+          var row = pos[i];
+          var col = pos[j];
+
+          if (_modules[row][col] != null) {
+            continue;
+          }
+
+          for (var r = -2; r <= 2; r += 1) {
+
+            for (var c = -2; c <= 2; c += 1) {
+
+              if (r == -2 || r == 2 || c == -2 || c == 2
+                  || (r == 0 && c == 0) ) {
+                _modules[row + r][col + c] = true;
+              } else {
+                _modules[row + r][col + c] = false;
+              }
+            }
+          }
+        }
+      }
+    };
+
+    var setupTypeNumber = function(test) {
+
+      var bits = QRUtil.getBCHTypeNumber(_typeNumber);
+
+      for (var i = 0; i < 18; i += 1) {
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+        _modules[Math.floor(i / 3)][i % 3 + _moduleCount - 8 - 3] = mod;
+      }
+
+      for (var i = 0; i < 18; i += 1) {
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+        _modules[i % 3 + _moduleCount - 8 - 3][Math.floor(i / 3)] = mod;
+      }
+    };
+
+    var setupTypeInfo = function(test, maskPattern) {
+
+      var data = (_errorCorrectionLevel << 3) | maskPattern;
+      var bits = QRUtil.getBCHTypeInfo(data);
+
+      // vertical
+      for (var i = 0; i < 15; i += 1) {
+
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+
+        if (i < 6) {
+          _modules[i][8] = mod;
+        } else if (i < 8) {
+          _modules[i + 1][8] = mod;
+        } else {
+          _modules[_moduleCount - 15 + i][8] = mod;
+        }
+      }
+
+      // horizontal
+      for (var i = 0; i < 15; i += 1) {
+
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+
+        if (i < 8) {
+          _modules[8][_moduleCount - i - 1] = mod;
+        } else if (i < 9) {
+          _modules[8][15 - i - 1 + 1] = mod;
+        } else {
+          _modules[8][15 - i - 1] = mod;
+        }
+      }
+
+      // fixed module
+      _modules[_moduleCount - 8][8] = (!test);
+    };
+
+    var mapData = function(data, maskPattern) {
+
+      var inc = -1;
+      var row = _moduleCount - 1;
+      var bitIndex = 7;
+      var byteIndex = 0;
+      var maskFunc = QRUtil.getMaskFunction(maskPattern);
+
+      for (var col = _moduleCount - 1; col > 0; col -= 2) {
+
+        if (col == 6) col -= 1;
+
+        while (true) {
+
+          for (var c = 0; c < 2; c += 1) {
+
+            if (_modules[row][col - c] == null) {
+
+              var dark = false;
+
+              if (byteIndex < data.length) {
+                dark = ( ( (data[byteIndex] >>> bitIndex) & 1) == 1);
+              }
+
+              var mask = maskFunc(row, col - c);
+
+              if (mask) {
+                dark = !dark;
+              }
+
+              _modules[row][col - c] = dark;
+              bitIndex -= 1;
+
+              if (bitIndex == -1) {
+                byteIndex += 1;
+                bitIndex = 7;
+              }
+            }
+          }
+
+          row += inc;
+
+          if (row < 0 || _moduleCount <= row) {
+            row -= inc;
+            inc = -inc;
+            break;
+          }
+        }
+      }
+    };
+
+    var createBytes = function(buffer, rsBlocks) {
+
+      var offset = 0;
+
+      var maxDcCount = 0;
+      var maxEcCount = 0;
+
+      var dcdata = new Array(rsBlocks.length);
+      var ecdata = new Array(rsBlocks.length);
+
+      for (var r = 0; r < rsBlocks.length; r += 1) {
+
+        var dcCount = rsBlocks[r].dataCount;
+        var ecCount = rsBlocks[r].totalCount - dcCount;
+
+        maxDcCount = Math.max(maxDcCount, dcCount);
+        maxEcCount = Math.max(maxEcCount, ecCount);
+
+        dcdata[r] = new Array(dcCount);
+
+        for (var i = 0; i < dcdata[r].length; i += 1) {
+          dcdata[r][i] = 0xff & buffer.getBuffer()[i + offset];
+        }
+        offset += dcCount;
+
+        var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
+        var rawPoly = qrPolynomial(dcdata[r], rsPoly.getLength() - 1);
+
+        var modPoly = rawPoly.mod(rsPoly);
+        ecdata[r] = new Array(rsPoly.getLength() - 1);
+        for (var i = 0; i < ecdata[r].length; i += 1) {
+          var modIndex = i + modPoly.getLength() - ecdata[r].length;
+          ecdata[r][i] = (modIndex >= 0)? modPoly.getAt(modIndex) : 0;
+        }
+      }
+
+      var totalCodeCount = 0;
+      for (var i = 0; i < rsBlocks.length; i += 1) {
+        totalCodeCount += rsBlocks[i].totalCount;
+      }
+
+      var data = new Array(totalCodeCount);
+      var index = 0;
+
+      for (var i = 0; i < maxDcCount; i += 1) {
+        for (var r = 0; r < rsBlocks.length; r += 1) {
+          if (i < dcdata[r].length) {
+            data[index] = dcdata[r][i];
+            index += 1;
+          }
+        }
+      }
+
+      for (var i = 0; i < maxEcCount; i += 1) {
+        for (var r = 0; r < rsBlocks.length; r += 1) {
+          if (i < ecdata[r].length) {
+            data[index] = ecdata[r][i];
+            index += 1;
+          }
+        }
+      }
+
+      return data;
+    };
+
+    var createData = function(typeNumber, errorCorrectionLevel, dataList) {
+
+      var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, errorCorrectionLevel);
+
+      var buffer = qrBitBuffer();
+
+      for (var i = 0; i < dataList.length; i += 1) {
+        var data = dataList[i];
+        buffer.put(data.getMode(), 4);
+        buffer.put(data.getLength(), QRUtil.getLengthInBits(data.getMode(), typeNumber) );
+        data.write(buffer);
+      }
+
+      // calc num max data.
+      var totalDataCount = 0;
+      for (var i = 0; i < rsBlocks.length; i += 1) {
+        totalDataCount += rsBlocks[i].dataCount;
+      }
+
+      if (buffer.getLengthInBits() > totalDataCount * 8) {
+        throw new Error('code length overflow. ('
+          + buffer.getLengthInBits()
+          + '>'
+          + totalDataCount * 8
+          + ')');
+      }
+
+      // end code
+      if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) {
+        buffer.put(0, 4);
+      }
+
+      // padding
+      while (buffer.getLengthInBits() % 8 != 0) {
+        buffer.putBit(false);
+      }
+
+      // padding
+      while (true) {
+
+        if (buffer.getLengthInBits() >= totalDataCount * 8) {
+          break;
+        }
+        buffer.put(PAD0, 8);
+
+        if (buffer.getLengthInBits() >= totalDataCount * 8) {
+          break;
+        }
+        buffer.put(PAD1, 8);
+      }
+
+      return createBytes(buffer, rsBlocks);
+    };
+
+    _this.addData = function(data, mode) {
+
+      mode = mode || 'Byte';
+
+      var newData = null;
+
+      switch(mode) {
+      case 'Numeric' :
+        newData = qrNumber(data);
+        break;
+      case 'Alphanumeric' :
+        newData = qrAlphaNum(data);
+        break;
+      case 'Byte' :
+        newData = qr8BitByte(data);
+        break;
+      case 'Kanji' :
+        newData = qrKanji(data);
+        break;
+      default :
+        throw 'mode:' + mode;
+      }
+
+      _dataList.push(newData);
+      _dataCache = null;
+    };
+
+    _this.isDark = function(row, col) {
+      if (row < 0 || _moduleCount <= row || col < 0 || _moduleCount <= col) {
+        throw new Error(row + ',' + col);
+      }
+      return _modules[row][col];
+    };
+
+    _this.getModuleCount = function() {
+      return _moduleCount;
+    };
+
+    _this.make = function() {
+      makeImpl(false, getBestMaskPattern() );
+    };
+
+    _this.createTableTag = function(cellSize, margin) {
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      var qrHtml = '';
+
+      qrHtml += '<table style="';
+      qrHtml += ' border-width: 0px; border-style: none;';
+      qrHtml += ' border-collapse: collapse;';
+      qrHtml += ' padding: 0px; margin: ' + margin + 'px;';
+      qrHtml += '">';
+      qrHtml += '<tbody>';
+
+      for (var r = 0; r < _this.getModuleCount(); r += 1) {
+
+        qrHtml += '<tr>';
+
+        for (var c = 0; c < _this.getModuleCount(); c += 1) {
+          qrHtml += '<td style="';
+          qrHtml += ' border-width: 0px; border-style: none;';
+          qrHtml += ' border-collapse: collapse;';
+          qrHtml += ' padding: 0px; margin: 0px;';
+          qrHtml += ' width: ' + cellSize + 'px;';
+          qrHtml += ' height: ' + cellSize + 'px;';
+          qrHtml += ' background-color: ';
+          qrHtml += _this.isDark(r, c)? '#000000' : '#ffffff';
+          qrHtml += ';';
+          qrHtml += '"/>';
+        }
+
+        qrHtml += '</tr>';
+      }
+
+      qrHtml += '</tbody>';
+      qrHtml += '</table>';
+
+      return qrHtml;
+    };
+
+    _this.createSvgTag = function(cellSize, margin) {
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var c, mc, r, mr, qrSvg='', rect;
+
+      rect = 'l' + cellSize + ',0 0,' + cellSize +
+        ' -' + cellSize + ',0 0,-' + cellSize + 'z ';
+
+      qrSvg += '<svg';
+      qrSvg += ' width="' + size + 'px"';
+      qrSvg += ' height="' + size + 'px"';
+      qrSvg += ' xmlns="http://www.w3.org/2000/svg"';
+      qrSvg += '>';
+      qrSvg += '<path d="';
+
+      for (r = 0; r < _this.getModuleCount(); r += 1) {
+        mr = r * cellSize + margin;
+        for (c = 0; c < _this.getModuleCount(); c += 1) {
+          if (_this.isDark(r, c) ) {
+            mc = c*cellSize+margin;
+            qrSvg += 'M' + mc + ',' + mr + rect;
+          }
+        }
+      }
+
+      qrSvg += '" stroke="transparent" fill="black"/>';
+      qrSvg += '</svg>';
+
+      return qrSvg;
+    };
+
+    _this.createImgTag = function(cellSize, margin) {
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var min = margin;
+      var max = size - margin;
+
+      return createImgTag(size, size, function(x, y) {
+        if (min <= x && x < max && min <= y && y < max) {
+          var c = Math.floor( (x - min) / cellSize);
+          var r = Math.floor( (y - min) / cellSize);
+          return _this.isDark(r, c)? 0 : 1;
+        } else {
+          return 1;
+        }
+      } );
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrcode.stringToBytes
+  //---------------------------------------------------------------------
+
+  qrcode.stringToBytes = function(s) {
+    var bytes = new Array();
+    for (var i = 0; i < s.length; i += 1) {
+      var c = s.charCodeAt(i);
+      bytes.push(c & 0xff);
+    }
+    return bytes;
+  };
+
+  //---------------------------------------------------------------------
+  // QRMode
+  //---------------------------------------------------------------------
+
+  var QRMode = {
+    MODE_NUMBER :    1 << 0,
+    MODE_ALPHA_NUM : 1 << 1,
+    MODE_8BIT_BYTE : 1 << 2,
+    MODE_KANJI :     1 << 3
+  };
+
+  //---------------------------------------------------------------------
+  // QRErrorCorrectionLevel
+  //---------------------------------------------------------------------
+
+  var QRErrorCorrectionLevel = {
+    L : 1,
+    M : 0,
+    Q : 3,
+    H : 2
+  };
+
+  //---------------------------------------------------------------------
+  // QRMaskPattern
+  //---------------------------------------------------------------------
+
+  var QRMaskPattern = {
+    PATTERN000 : 0,
+    PATTERN001 : 1,
+    PATTERN010 : 2,
+    PATTERN011 : 3,
+    PATTERN100 : 4,
+    PATTERN101 : 5,
+    PATTERN110 : 6,
+    PATTERN111 : 7
+  };
+
+  //---------------------------------------------------------------------
+  // QRUtil
+  //---------------------------------------------------------------------
+
+  var QRUtil = function() {
+
+    var PATTERN_POSITION_TABLE = [
+      [],
+      [6, 18],
+      [6, 22],
+      [6, 26],
+      [6, 30],
+      [6, 34],
+      [6, 22, 38],
+      [6, 24, 42],
+      [6, 26, 46],
+      [6, 28, 50],
+      [6, 30, 54],
+      [6, 32, 58],
+      [6, 34, 62],
+      [6, 26, 46, 66],
+      [6, 26, 48, 70],
+      [6, 26, 50, 74],
+      [6, 30, 54, 78],
+      [6, 30, 56, 82],
+      [6, 30, 58, 86],
+      [6, 34, 62, 90],
+      [6, 28, 50, 72, 94],
+      [6, 26, 50, 74, 98],
+      [6, 30, 54, 78, 102],
+      [6, 28, 54, 80, 106],
+      [6, 32, 58, 84, 110],
+      [6, 30, 58, 86, 114],
+      [6, 34, 62, 90, 118],
+      [6, 26, 50, 74, 98, 122],
+      [6, 30, 54, 78, 102, 126],
+      [6, 26, 52, 78, 104, 130],
+      [6, 30, 56, 82, 108, 134],
+      [6, 34, 60, 86, 112, 138],
+      [6, 30, 58, 86, 114, 142],
+      [6, 34, 62, 90, 118, 146],
+      [6, 30, 54, 78, 102, 126, 150],
+      [6, 24, 50, 76, 102, 128, 154],
+      [6, 28, 54, 80, 106, 132, 158],
+      [6, 32, 58, 84, 110, 136, 162],
+      [6, 26, 54, 82, 110, 138, 166],
+      [6, 30, 58, 86, 114, 142, 170]
+    ];
+    var G15 = (1 << 10) | (1 << 8) | (1 << 5) | (1 << 4) | (1 << 2) | (1 << 1) | (1 << 0);
+    var G18 = (1 << 12) | (1 << 11) | (1 << 10) | (1 << 9) | (1 << 8) | (1 << 5) | (1 << 2) | (1 << 0);
+    var G15_MASK = (1 << 14) | (1 << 12) | (1 << 10) | (1 << 4) | (1 << 1);
+
+    var _this = {};
+
+    var getBCHDigit = function(data) {
+      var digit = 0;
+      while (data != 0) {
+        digit += 1;
+        data >>>= 1;
+      }
+      return digit;
+    };
+
+    _this.getBCHTypeInfo = function(data) {
+      var d = data << 10;
+      while (getBCHDigit(d) - getBCHDigit(G15) >= 0) {
+        d ^= (G15 << (getBCHDigit(d) - getBCHDigit(G15) ) );
+      }
+      return ( (data << 10) | d) ^ G15_MASK;
+    };
+
+    _this.getBCHTypeNumber = function(data) {
+      var d = data << 12;
+      while (getBCHDigit(d) - getBCHDigit(G18) >= 0) {
+        d ^= (G18 << (getBCHDigit(d) - getBCHDigit(G18) ) );
+      }
+      return (data << 12) | d;
+    };
+
+    _this.getPatternPosition = function(typeNumber) {
+      return PATTERN_POSITION_TABLE[typeNumber - 1];
+    };
+
+    _this.getMaskFunction = function(maskPattern) {
+
+      switch (maskPattern) {
+
+      case QRMaskPattern.PATTERN000 :
+        return function(i, j) { return (i + j) % 2 == 0; };
+      case QRMaskPattern.PATTERN001 :
+        return function(i, j) { return i % 2 == 0; };
+      case QRMaskPattern.PATTERN010 :
+        return function(i, j) { return j % 3 == 0; };
+      case QRMaskPattern.PATTERN011 :
+        return function(i, j) { return (i + j) % 3 == 0; };
+      case QRMaskPattern.PATTERN100 :
+        return function(i, j) { return (Math.floor(i / 2) + Math.floor(j / 3) ) % 2 == 0; };
+      case QRMaskPattern.PATTERN101 :
+        return function(i, j) { return (i * j) % 2 + (i * j) % 3 == 0; };
+      case QRMaskPattern.PATTERN110 :
+        return function(i, j) { return ( (i * j) % 2 + (i * j) % 3) % 2 == 0; };
+      case QRMaskPattern.PATTERN111 :
+        return function(i, j) { return ( (i * j) % 3 + (i + j) % 2) % 2 == 0; };
+
+      default :
+        throw new Error('bad maskPattern:' + maskPattern);
+      }
+    };
+
+    _this.getErrorCorrectPolynomial = function(errorCorrectLength) {
+      var a = qrPolynomial([1], 0);
+      for (var i = 0; i < errorCorrectLength; i += 1) {
+        a = a.multiply(qrPolynomial([1, QRMath.gexp(i)], 0) );
+      }
+      return a;
+    };
+
+    _this.getLengthInBits = function(mode, type) {
+
+      if (1 <= type && type < 10) {
+
+        // 1 - 9
+
+        switch(mode) {
+        case QRMode.MODE_NUMBER    : return 10;
+        case QRMode.MODE_ALPHA_NUM : return 9;
+        case QRMode.MODE_8BIT_BYTE : return 8;
+        case QRMode.MODE_KANJI     : return 8;
+        default :
+          throw new Error('mode:' + mode);
+        }
+
+      } else if (type < 27) {
+
+        // 10 - 26
+
+        switch(mode) {
+        case QRMode.MODE_NUMBER    : return 12;
+        case QRMode.MODE_ALPHA_NUM : return 11;
+        case QRMode.MODE_8BIT_BYTE : return 16;
+        case QRMode.MODE_KANJI     : return 10;
+        default :
+          throw new Error('mode:' + mode);
+        }
+
+      } else if (type < 41) {
+
+        // 27 - 40
+
+        switch(mode) {
+        case QRMode.MODE_NUMBER    : return 14;
+        case QRMode.MODE_ALPHA_NUM : return 13;
+        case QRMode.MODE_8BIT_BYTE : return 16;
+        case QRMode.MODE_KANJI     : return 12;
+        default :
+          throw new Error('mode:' + mode);
+        }
+
+      } else {
+        throw new Error('type:' + type);
+      }
+    };
+
+    _this.getLostPoint = function(qrcode) {
+
+      var moduleCount = qrcode.getModuleCount();
+
+      var lostPoint = 0;
+
+      // LEVEL1
+
+      for (var row = 0; row < moduleCount; row += 1) {
+        for (var col = 0; col < moduleCount; col += 1) {
+
+          var sameCount = 0;
+          var dark = qrcode.isDark(row, col);
+
+          for (var r = -1; r <= 1; r += 1) {
+
+            if (row + r < 0 || moduleCount <= row + r) {
+              continue;
+            }
+
+            for (var c = -1; c <= 1; c += 1) {
+
+              if (col + c < 0 || moduleCount <= col + c) {
+                continue;
+              }
+
+              if (r == 0 && c == 0) {
+                continue;
+              }
+
+              if (dark == qrcode.isDark(row + r, col + c) ) {
+                sameCount += 1;
+              }
+            }
+          }
+
+          if (sameCount > 5) {
+            lostPoint += (3 + sameCount - 5);
+          }
+        }
+      };
+
+      // LEVEL2
+
+      for (var row = 0; row < moduleCount - 1; row += 1) {
+        for (var col = 0; col < moduleCount - 1; col += 1) {
+          var count = 0;
+          if (qrcode.isDark(row, col) ) count += 1;
+          if (qrcode.isDark(row + 1, col) ) count += 1;
+          if (qrcode.isDark(row, col + 1) ) count += 1;
+          if (qrcode.isDark(row + 1, col + 1) ) count += 1;
+          if (count == 0 || count == 4) {
+            lostPoint += 3;
+          }
+        }
+      }
+
+      // LEVEL3
+
+      for (var row = 0; row < moduleCount; row += 1) {
+        for (var col = 0; col < moduleCount - 6; col += 1) {
+          if (qrcode.isDark(row, col)
+              && !qrcode.isDark(row, col + 1)
+              &&  qrcode.isDark(row, col + 2)
+              &&  qrcode.isDark(row, col + 3)
+              &&  qrcode.isDark(row, col + 4)
+              && !qrcode.isDark(row, col + 5)
+              &&  qrcode.isDark(row, col + 6) ) {
+            lostPoint += 40;
+          }
+        }
+      }
+
+      for (var col = 0; col < moduleCount; col += 1) {
+        for (var row = 0; row < moduleCount - 6; row += 1) {
+          if (qrcode.isDark(row, col)
+              && !qrcode.isDark(row + 1, col)
+              &&  qrcode.isDark(row + 2, col)
+              &&  qrcode.isDark(row + 3, col)
+              &&  qrcode.isDark(row + 4, col)
+              && !qrcode.isDark(row + 5, col)
+              &&  qrcode.isDark(row + 6, col) ) {
+            lostPoint += 40;
+          }
+        }
+      }
+
+      // LEVEL4
+
+      var darkCount = 0;
+
+      for (var col = 0; col < moduleCount; col += 1) {
+        for (var row = 0; row < moduleCount; row += 1) {
+          if (qrcode.isDark(row, col) ) {
+            darkCount += 1;
+          }
+        }
+      }
+
+      var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+      lostPoint += ratio * 10;
+
+      return lostPoint;
+    };
+
+    return _this;
+  }();
+
+  //---------------------------------------------------------------------
+  // QRMath
+  //---------------------------------------------------------------------
+
+  var QRMath = function() {
+
+    var EXP_TABLE = new Array(256);
+    var LOG_TABLE = new Array(256);
+
+    // initialize tables
+    for (var i = 0; i < 8; i += 1) {
+      EXP_TABLE[i] = 1 << i;
+    }
+    for (var i = 8; i < 256; i += 1) {
+      EXP_TABLE[i] = EXP_TABLE[i - 4]
+        ^ EXP_TABLE[i - 5]
+        ^ EXP_TABLE[i - 6]
+        ^ EXP_TABLE[i - 8];
+    }
+    for (var i = 0; i < 255; i += 1) {
+      LOG_TABLE[EXP_TABLE[i] ] = i;
+    }
+
+    var _this = {};
+
+    _this.glog = function(n) {
+
+      if (n < 1) {
+        throw new Error('glog(' + n + ')');
+      }
+
+      return LOG_TABLE[n];
+    };
+
+    _this.gexp = function(n) {
+
+      while (n < 0) {
+        n += 255;
+      }
+
+      while (n >= 256) {
+        n -= 255;
+      }
+
+      return EXP_TABLE[n];
+    };
+
+    return _this;
+  }();
+
+  //---------------------------------------------------------------------
+  // qrPolynomial
+  //---------------------------------------------------------------------
+
+  function qrPolynomial(num, shift) {
+
+    if (typeof num.length == 'undefined') {
+      throw new Error(num.length + '/' + shift);
+    }
+
+    var _num = function() {
+      var offset = 0;
+      while (offset < num.length && num[offset] == 0) {
+        offset += 1;
+      }
+      var _num = new Array(num.length - offset + shift);
+      for (var i = 0; i < num.length - offset; i += 1) {
+        _num[i] = num[i + offset];
+      }
+      return _num;
+    }();
+
+    var _this = {};
+
+    _this.getAt = function(index) {
+      return _num[index];
+    };
+
+    _this.getLength = function() {
+      return _num.length;
+    };
+
+    _this.multiply = function(e) {
+
+      var num = new Array(_this.getLength() + e.getLength() - 1);
+
+      for (var i = 0; i < _this.getLength(); i += 1) {
+        for (var j = 0; j < e.getLength(); j += 1) {
+          num[i + j] ^= QRMath.gexp(QRMath.glog(_this.getAt(i) ) + QRMath.glog(e.getAt(j) ) );
+        }
+      }
+
+      return qrPolynomial(num, 0);
+    };
+
+    _this.mod = function(e) {
+
+      if (_this.getLength() - e.getLength() < 0) {
+        return _this;
+      }
+
+      var ratio = QRMath.glog(_this.getAt(0) ) - QRMath.glog(e.getAt(0) );
+
+      var num = new Array(_this.getLength() );
+      for (var i = 0; i < _this.getLength(); i += 1) {
+        num[i] = _this.getAt(i);
+      }
+
+      for (var i = 0; i < e.getLength(); i += 1) {
+        num[i] ^= QRMath.gexp(QRMath.glog(e.getAt(i) ) + ratio);
+      }
+
+      // recursive call
+      return qrPolynomial(num, 0).mod(e);
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // QRRSBlock
+  //---------------------------------------------------------------------
+
+  var QRRSBlock = function() {
+
+    var RS_BLOCK_TABLE = [
+
+      [1, 26, 19],
+      [1, 26, 16],
+      [1, 26, 13],
+      [1, 26, 9],
+
+      [1, 44, 34],
+      [1, 44, 28],
+      [1, 44, 22],
+      [1, 44, 16],
+
+      [1, 70, 55],
+      [1, 70, 44],
+      [2, 35, 17],
+      [2, 35, 13],
+
+      [1, 100, 80],
+      [2, 50, 32],
+      [2, 50, 24],
+      [4, 25, 9],
+
+      [1, 134, 108],
+      [2, 67, 43],
+      [2, 33, 15, 2, 34, 16],
+      [2, 33, 11, 2, 34, 12],
+
+      [2, 86, 68],
+      [4, 43, 27],
+      [4, 43, 19],
+      [4, 43, 15],
+
+      [2, 98, 78],
+      [4, 49, 31],
+      [2, 32, 14, 4, 33, 15],
+      [4, 39, 13, 1, 40, 14],
+
+      [2, 121, 97],
+      [2, 60, 38, 2, 61, 39],
+      [4, 40, 18, 2, 41, 19],
+      [4, 40, 14, 2, 41, 15],
+
+      [2, 146, 116],
+      [3, 58, 36, 2, 59, 37],
+      [4, 36, 16, 4, 37, 17],
+      [4, 36, 12, 4, 37, 13],
+
+      [2, 86, 68, 2, 87, 69],
+      [4, 69, 43, 1, 70, 44],
+      [6, 43, 19, 2, 44, 20],
+      [6, 43, 15, 2, 44, 16],
+
+      [4, 101, 81],
+      [1, 80, 50, 4, 81, 51],
+      [4, 50, 22, 4, 51, 23],
+      [3, 36, 12, 8, 37, 13],
+
+      [2, 116, 92, 2, 117, 93],
+      [6, 58, 36, 2, 59, 37],
+      [4, 46, 20, 6, 47, 21],
+      [7, 42, 14, 4, 43, 15],
+
+      [4, 133, 107],
+      [8, 59, 37, 1, 60, 38],
+      [8, 44, 20, 4, 45, 21],
+      [12, 33, 11, 4, 34, 12],
+
+      [3, 145, 115, 1, 146, 116],
+      [4, 64, 40, 5, 65, 41],
+      [11, 36, 16, 5, 37, 17],
+      [11, 36, 12, 5, 37, 13],
+
+      [5, 109, 87, 1, 110, 88],
+      [5, 65, 41, 5, 66, 42],
+      [5, 54, 24, 7, 55, 25],
+      [11, 36, 12, 7, 37, 13],
+
+      [5, 122, 98, 1, 123, 99],
+      [7, 73, 45, 3, 74, 46],
+      [15, 43, 19, 2, 44, 20],
+      [3, 45, 15, 13, 46, 16],
+
+      [1, 135, 107, 5, 136, 108],
+      [10, 74, 46, 1, 75, 47],
+      [1, 50, 22, 15, 51, 23],
+      [2, 42, 14, 17, 43, 15],
+
+      [5, 150, 120, 1, 151, 121],
+      [9, 69, 43, 4, 70, 44],
+      [17, 50, 22, 1, 51, 23],
+      [2, 42, 14, 19, 43, 15],
+
+      [3, 141, 113, 4, 142, 114],
+      [3, 70, 44, 11, 71, 45],
+      [17, 47, 21, 4, 48, 22],
+      [9, 39, 13, 16, 40, 14],
+
+      [3, 135, 107, 5, 136, 108],
+      [3, 67, 41, 13, 68, 42],
+      [15, 54, 24, 5, 55, 25],
+      [15, 43, 15, 10, 44, 16],
+
+      [4, 144, 116, 4, 145, 117],
+      [17, 68, 42],
+      [17, 50, 22, 6, 51, 23],
+      [19, 46, 16, 6, 47, 17],
+
+      [2, 139, 111, 7, 140, 112],
+      [17, 74, 46],
+      [7, 54, 24, 16, 55, 25],
+      [34, 37, 13],
+
+      [4, 151, 121, 5, 152, 122],
+      [4, 75, 47, 14, 76, 48],
+      [11, 54, 24, 14, 55, 25],
+      [16, 45, 15, 14, 46, 16],
+
+      [6, 147, 117, 4, 148, 118],
+      [6, 73, 45, 14, 74, 46],
+      [11, 54, 24, 16, 55, 25],
+      [30, 46, 16, 2, 47, 17],
+
+      [8, 132, 106, 4, 133, 107],
+      [8, 75, 47, 13, 76, 48],
+      [7, 54, 24, 22, 55, 25],
+      [22, 45, 15, 13, 46, 16],
+
+      [10, 142, 114, 2, 143, 115],
+      [19, 74, 46, 4, 75, 47],
+      [28, 50, 22, 6, 51, 23],
+      [33, 46, 16, 4, 47, 17],
+
+      [8, 152, 122, 4, 153, 123],
+      [22, 73, 45, 3, 74, 46],
+      [8, 53, 23, 26, 54, 24],
+      [12, 45, 15, 28, 46, 16],
+
+      [3, 147, 117, 10, 148, 118],
+      [3, 73, 45, 23, 74, 46],
+      [4, 54, 24, 31, 55, 25],
+      [11, 45, 15, 31, 46, 16],
+
+      [7, 146, 116, 7, 147, 117],
+      [21, 73, 45, 7, 74, 46],
+      [1, 53, 23, 37, 54, 24],
+      [19, 45, 15, 26, 46, 16],
+
+      [5, 145, 115, 10, 146, 116],
+      [19, 75, 47, 10, 76, 48],
+      [15, 54, 24, 25, 55, 25],
+      [23, 45, 15, 25, 46, 16],
+
+      [13, 145, 115, 3, 146, 116],
+      [2, 74, 46, 29, 75, 47],
+      [42, 54, 24, 1, 55, 25],
+      [23, 45, 15, 28, 46, 16],
+
+      [17, 145, 115],
+      [10, 74, 46, 23, 75, 47],
+      [10, 54, 24, 35, 55, 25],
+      [19, 45, 15, 35, 46, 16],
+
+      [17, 145, 115, 1, 146, 116],
+      [14, 74, 46, 21, 75, 47],
+      [29, 54, 24, 19, 55, 25],
+      [11, 45, 15, 46, 46, 16],
+
+      [13, 145, 115, 6, 146, 116],
+      [14, 74, 46, 23, 75, 47],
+      [44, 54, 24, 7, 55, 25],
+      [59, 46, 16, 1, 47, 17],
+
+      [12, 151, 121, 7, 152, 122],
+      [12, 75, 47, 26, 76, 48],
+      [39, 54, 24, 14, 55, 25],
+      [22, 45, 15, 41, 46, 16],
+
+      [6, 151, 121, 14, 152, 122],
+      [6, 75, 47, 34, 76, 48],
+      [46, 54, 24, 10, 55, 25],
+      [2, 45, 15, 64, 46, 16],
+
+      [17, 152, 122, 4, 153, 123],
+      [29, 74, 46, 14, 75, 47],
+      [49, 54, 24, 10, 55, 25],
+      [24, 45, 15, 46, 46, 16],
+
+      [4, 152, 122, 18, 153, 123],
+      [13, 74, 46, 32, 75, 47],
+      [48, 54, 24, 14, 55, 25],
+      [42, 45, 15, 32, 46, 16],
+
+      [20, 147, 117, 4, 148, 118],
+      [40, 75, 47, 7, 76, 48],
+      [43, 54, 24, 22, 55, 25],
+      [10, 45, 15, 67, 46, 16],
+
+      [19, 148, 118, 6, 149, 119],
+      [18, 75, 47, 31, 76, 48],
+      [34, 54, 24, 34, 55, 25],
+      [20, 45, 15, 61, 46, 16]
+    ];
+
+    var qrRSBlock = function(totalCount, dataCount) {
+      var _this = {};
+      _this.totalCount = totalCount;
+      _this.dataCount = dataCount;
+      return _this;
+    };
+
+    var _this = {};
+
+    var getRsBlockTable = function(typeNumber, errorCorrectionLevel) {
+
+      switch(errorCorrectionLevel) {
+      case QRErrorCorrectionLevel.L :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 0];
+      case QRErrorCorrectionLevel.M :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 1];
+      case QRErrorCorrectionLevel.Q :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 2];
+      case QRErrorCorrectionLevel.H :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 3];
+      default :
+        return undefined;
+      }
+    };
+
+    _this.getRSBlocks = function(typeNumber, errorCorrectionLevel) {
+
+      var rsBlock = getRsBlockTable(typeNumber, errorCorrectionLevel);
+
+      if (typeof rsBlock == 'undefined') {
+        throw new Error('bad rs block @ typeNumber:' + typeNumber +
+            '/errorCorrectionLevel:' + errorCorrectionLevel);
+      }
+
+      var length = rsBlock.length / 3;
+
+      var list = new Array();
+
+      for (var i = 0; i < length; i += 1) {
+
+        var count = rsBlock[i * 3 + 0];
+        var totalCount = rsBlock[i * 3 + 1];
+        var dataCount = rsBlock[i * 3 + 2];
+
+        for (var j = 0; j < count; j += 1) {
+          list.push(qrRSBlock(totalCount, dataCount) );
+        }
+      }
+
+      return list;
+    };
+
+    return _this;
+  }();
+
+  //---------------------------------------------------------------------
+  // qrBitBuffer
+  //---------------------------------------------------------------------
+
+  var qrBitBuffer = function() {
+
+    var _buffer = new Array();
+    var _length = 0;
+
+    var _this = {};
+
+    _this.getBuffer = function() {
+      return _buffer;
+    };
+
+    _this.getAt = function(index) {
+      var bufIndex = Math.floor(index / 8);
+      return ( (_buffer[bufIndex] >>> (7 - index % 8) ) & 1) == 1;
+    };
+
+    _this.put = function(num, length) {
+      for (var i = 0; i < length; i += 1) {
+        _this.putBit( ( (num >>> (length - i - 1) ) & 1) == 1);
+      }
+    };
+
+    _this.getLengthInBits = function() {
+      return _length;
+    };
+
+    _this.putBit = function(bit) {
+
+      var bufIndex = Math.floor(_length / 8);
+      if (_buffer.length <= bufIndex) {
+        _buffer.push(0);
+      }
+
+      if (bit) {
+        _buffer[bufIndex] |= (0x80 >>> (_length % 8) );
+      }
+
+      _length += 1;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrNumber
+  //---------------------------------------------------------------------
+
+  var qrNumber = function(data) {
+
+    var _mode = QRMode.MODE_NUMBER;
+    var _data = data;
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return _data.length;
+    };
+
+    _this.write = function(buffer) {
+
+      var data = _data;
+
+      var i = 0;
+
+      while (i + 2 < data.length) {
+        buffer.put(strToNum(data.substring(i, i + 3) ), 10);
+        i += 3;
+      }
+
+      if (i < data.length) {
+        if (data.length - i == 1) {
+          buffer.put(strToNum(data.substring(i, i + 1) ), 4);
+        } else if (data.length - i == 2) {
+          buffer.put(strToNum(data.substring(i, i + 2) ), 7);
+        }
+      }
+    };
+
+    var strToNum = function(s) {
+      var num = 0;
+      for (var i = 0; i < s.length; i += 1) {
+        num = num * 10 + chatToNum(s.charAt(i) );
+      }
+      return num;
+    };
+
+    var chatToNum = function(c) {
+      if ('0' <= c && c <= '9') {
+        return c.charCodeAt(0) - '0'.charCodeAt(0);
+      }
+      throw 'illegal char :' + c;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrAlphaNum
+  //---------------------------------------------------------------------
+
+  var qrAlphaNum = function(data) {
+
+    var _mode = QRMode.MODE_ALPHA_NUM;
+    var _data = data;
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return _data.length;
+    };
+
+    _this.write = function(buffer) {
+
+      var s = _data;
+
+      var i = 0;
+
+      while (i + 1 < s.length) {
+        buffer.put(
+          getCode(s.charAt(i) ) * 45 +
+          getCode(s.charAt(i + 1) ), 11);
+        i += 2;
+      }
+
+      if (i < s.length) {
+        buffer.put(getCode(s.charAt(i) ), 6);
+      }
+    };
+
+    var getCode = function(c) {
+
+      if ('0' <= c && c <= '9') {
+        return c.charCodeAt(0) - '0'.charCodeAt(0);
+      } else if ('A' <= c && c <= 'Z') {
+        return c.charCodeAt(0) - 'A'.charCodeAt(0) + 10;
+      } else {
+        switch (c) {
+        case ' ' : return 36;
+        case '$' : return 37;
+        case '%' : return 38;
+        case '*' : return 39;
+        case '+' : return 40;
+        case '-' : return 41;
+        case '.' : return 42;
+        case '/' : return 43;
+        case ':' : return 44;
+        default :
+          throw 'illegal char :' + c;
+        }
+      }
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qr8BitByte
+  //---------------------------------------------------------------------
+
+  var qr8BitByte = function(data) {
+
+    var _mode = QRMode.MODE_8BIT_BYTE;
+    var _data = data;
+    var _bytes = qrcode.stringToBytes(data);
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return _bytes.length;
+    };
+
+    _this.write = function(buffer) {
+      for (var i = 0; i < _bytes.length; i += 1) {
+        buffer.put(_bytes[i], 8);
+      }
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // returns qrcode function.
+
+  return qrcode;
+}();
+
+</script>
+<script>
+(function () {
+  "use strict";
+
+  var WEEKDAYS = ["日", "月", "火", "水", "木", "金", "土"];
+  var TYPE_OPTIONS = ["なし", "同伴", "本指名", "指名", "場内"];
+  var TYPE_POINTS = { "なし": 0, "同伴": 2.0, "本指名": 1.0, "指名": 0.5, "場内": 0.5 };
+
+  function uid() { return Math.random().toString(36).slice(2, 10); }
+
+  function todayStr() {
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+
+  function monthKeyFromDate(dateStr) { return dateStr.slice(0, 7); }
+
+  function weekdayOf(dateStr) {
+    if (!dateStr) return "";
+    var d = new Date(dateStr + "T00:00:00");
+    if (isNaN(d.getTime())) return "";
+    return WEEKDAYS[d.getDay()];
+  }
+
+  function isNibuDay(dateStr) {
+    var w = weekdayOf(dateStr);
+    return w === "月" || w === "土";
+  }
+
+  function emptyCustomer() {
+    return { id: uid(), name: "", type: "なし", reservation: 0, event: 0, wine: 0, nibu: 0, rikka: 0, nyukai: 0 };
+  }
+
+  function emptyDay(dateStr) {
+    return { id: uid(), date: dateStr, worked: true, workHours: 0, attendancePoints: 0, salesPoints: 0, customers: [emptyCustomer()] };
+  }
+
+  function customerPoints(c) {
+    var typePt = TYPE_POINTS[c.type] || 0;
+    var reservationPt = c.reservation === true ? 0.5 : (Number(c.reservation) || 0);
+    var eventPt = Number(c.event) || 0;
+    var nibuPt = Number(c.nibu) || 0;
+    var rikkaPt = Number(c.rikka) || 0;
+    var nyukaiPt = c.nyukai === true ? 4.0 : (Number(c.nyukai) || 0);
+    var shukyaku = (c.type === "同伴" || c.type === "本指名") ? 1 : 0;
+    var sum = typePt + reservationPt + eventPt + nibuPt + rikkaPt + nyukaiPt;
+    return { typePt: typePt, reservationPt: reservationPt, eventPt: eventPt, nibuPt: nibuPt, rikkaPt: rikkaPt, nyukaiPt: nyukaiPt, shukyaku: shukyaku, sum: sum };
+  }
+
+  function dayTotals(day) {
+    var sum = 0, event = 0, nibu = 0, rikka = 0, reservation = 0, nyukai = 0, shukyaku = 0, wine = 0;
+    var typeSums = { "同伴": 0, "本指名": 0, "指名": 0, "場内": 0 };
+    day.customers.forEach(function (c) {
+      var p = customerPoints(c);
+      sum += p.sum; event += p.eventPt; nibu += p.nibuPt; rikka += p.rikkaPt;
+      reservation += p.reservationPt; nyukai += p.nyukaiPt; shukyaku += p.shukyaku;
+      wine += Number(c.wine) || 0;
+      if (typeSums[c.type] !== undefined) typeSums[c.type] += TYPE_POINTS[c.type];
+    });
+    var salesPoints = Number(day.salesPoints) || 0;
+    var attendancePoints = Number(day.attendancePoints) || 0;
+    return { sum: sum + salesPoints + attendancePoints, event: event + attendancePoints, nibu: nibu, rikka: rikka, reservation: reservation, nyukai: nyukai, shukyaku: shukyaku, wine: wine, salesPoints: salesPoints, attendancePoints: attendancePoints, typeSums: typeSums };
+  }
+
+  function monthSummary(days) {
+    var acc = { sum: 0, event: 0, nibu: 0, rikka: 0, reservation: 0, nyukai: 0, shukyaku: 0, wine: 0, salesPoints: 0, workHours: 0, typeSums: { "同伴": 0, "本指名": 0, "指名": 0, "場内": 0 }, workedDays: 0 };
+    days.forEach(function (day) {
+      var t = dayTotals(day);
+      acc.sum += t.sum; acc.event += t.event; acc.nibu += t.nibu; acc.rikka += t.rikka;
+      acc.reservation += t.reservation; acc.nyukai += t.nyukai; acc.shukyaku += t.shukyaku;
+      acc.wine += t.wine; acc.salesPoints += t.salesPoints;
+      acc.workHours += Number(day.workHours) || 0;
+      Object.keys(acc.typeSums).forEach(function (k) { acc.typeSums[k] += t.typeSums[k]; });
+      if (day.worked) acc.workedDays += 1;
+    });
+    var winePoints = Math.floor(acc.wine / 4) * 2.0;
+    var grandTotal = acc.sum + winePoints;
+    var conversion = acc.workedDays > 0 ? Math.floor((grandTotal / acc.workedDays) * 2) / 2 : 0;
+    acc.winePoints = winePoints; acc.grandTotal = grandTotal; acc.conversion = conversion;
+    return acc;
+  }
+
+  function fmt(n) {
+    var v = Math.round((Number(n) || 0) * 100) / 100;
+    return v.toFixed(1);
+  }
+
+  // ---------- State ----------
+  var state = { monthKey: periodKeyFromDate(todayStr()), days: [] };
+  var activeDay = null; // the single day currently shown in the panel below the calendar (or null if none selected)
+  var draftDay = null; // a day created by tapping the calendar that hasn't received any input yet; not saved until edited
+  var periodKnownIds = {}; // ids ever present in state.days for the currently-viewed period (survives in-session deletions, so saves can purge them)
+
+  function markKnownId(day) { periodKnownIds[day.id] = true; }
+
+  function commitDraftIfNeeded(day) {
+    if (draftDay && day === draftDay) {
+      state.days.push(day);
+      markKnownId(day);
+      state.days.sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+      draftDay = null;
+      renderCalendar(); // refresh calendar coloring immediately without disturbing any focused input
+    }
+  }
+  var saveTimer = null;
+
+  function storageKey(monthKey) { return "kyabakura:month:" + monthKey; }
+
+  // ---------- Customers (master list, shared across all months) ----------
+  var CUSTOMERS_KEY = "kyabakura:customers";
+
+  function loadCustomers() {
+    try {
+      var raw = localStorage.getItem(CUSTOMERS_KEY);
+      var list = raw ? JSON.parse(raw) : [];
+      // migrate old single "name" field into fullName
+      list.forEach(function (c) {
+        if (c.fullName === undefined) {
+          c.fullName = c.name || "";
+          c.nickname = c.nickname || "";
+        }
+        if (c.excluded === undefined) c.excluded = false;
+      });
+      return list;
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function customerDisplayName(c) {
+    return c.nickname || c.fullName || "";
+  }
+
+  function customerSuggestName(c) {
+    return (c.nickname && c.nickname.trim()) || (c.fullName && c.fullName.trim()) || "";
+  }
+
+  function customerNameVariants(c) {
+    var out = [];
+    if (c.fullName) out.push(c.fullName.trim());
+    if (c.nickname) out.push(c.nickname.trim());
+    return out.filter(Boolean);
+  }
+
+  function saveCustomers(list) {
+    try { localStorage.setItem(CUSTOMERS_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  function refreshCustomerDatalist() {
+    var dl = document.getElementById("customerNamesList");
+    if (!dl) return;
+    var names = [];
+    loadCustomers().forEach(function (c) {
+      if (c.excluded) return;
+      customerNameVariants(c).forEach(function (n) {
+        if (names.indexOf(n) === -1) names.push(n);
+      });
+    });
+    dl.innerHTML = names.map(function (n) { return '<option value="' + escapeAttr(n) + '">'; }).join("");
+  }
+
+  function allMonthsData() {
+    var out = [];
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && k.indexOf("kyabakura:month:") === 0) {
+          try {
+            var days = JSON.parse(localStorage.getItem(k));
+            out.push({ monthKey: k.slice("kyabakura:month:".length), days: days || [] });
+          } catch (e2) {}
+        }
+      }
+    } catch (e) {}
+    return out;
+  }
+
+  function customerAggregate(customer) {
+    var targets = customerNameVariants(customer);
+    var typeCounts = { "同伴": 0, "本指名": 0, "指名": 0, "場内": 0 };
+    var wineTotal = 0;
+    var visitCount = 0;
+    var monthsWithWine = {};
+    var monthsVisited = {};
+
+    if (targets.length) {
+      allMonthsData().forEach(function (m) {
+        m.days.forEach(function (day) {
+          (day.customers || []).forEach(function (c) {
+            if (targets.indexOf((c.name || "").trim()) === -1) return;
+            visitCount++;
+            monthsVisited[m.monthKey] = true;
+            if (typeCounts[c.type] !== undefined) typeCounts[c.type]++;
+            var wv = Number(c.wine) || 0;
+            if (wv) {
+              wineTotal += wv;
+              monthsWithWine[m.monthKey] = true;
+            }
+          });
+        });
+      });
+    }
+
+    var monthsWithWineCount = Object.keys(monthsWithWine).length;
+    var typeTotal = typeCounts["同伴"] + typeCounts["本指名"] + typeCounts["指名"] + typeCounts["場内"];
+
+    return {
+      typeCounts: typeCounts,
+      typeTotal: typeTotal,
+      visitCount: visitCount,
+      wineTotal: Math.round(wineTotal * 100) / 100,
+      monthsVisitedCount: Object.keys(monthsVisited).length,
+      monthlyWineAvg: monthsWithWineCount ? Math.round((wineTotal / monthsWithWineCount) * 100) / 100 : 0
+    };
+  }
+
+  function loadMonth(monthKey) {
+    try {
+      var raw = localStorage.getItem(storageKey(monthKey));
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) { return []; }
+  }
+
+  // ---------- Pay-period helpers (26th of previous month -> 25th of this month) ----------
+  function fmtDate(d) {
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+
+  function periodRange(periodKey) {
+    var parts = periodKey.split("-");
+    var y = Number(parts[0]), m = Number(parts[1]);
+    var endDate = new Date(y, m - 1, 25);
+    var startDate = new Date(y, m - 2, 26);
+    return { start: fmtDate(startDate), end: fmtDate(endDate) };
+  }
+
+  function periodBucketKeys(periodKey) {
+    var parts = periodKey.split("-");
+    var y = Number(parts[0]), m = Number(parts[1]);
+    var prev = new Date(y, m - 2, 1);
+    var prevKey = prev.getFullYear() + "-" + String(prev.getMonth() + 1).padStart(2, "0");
+    return [prevKey, periodKey];
+  }
+
+  function periodKeyFromDate(dateStr) {
+    var parts = dateStr.split("-");
+    var y = Number(parts[0]), m = Number(parts[1]), d = Number(parts[2]);
+    if (d >= 26) {
+      m += 1;
+      if (m > 12) { m = 1; y += 1; }
+    }
+    return y + "-" + String(m).padStart(2, "0");
+  }
+
+  function loadPeriod(periodKey) {
+    var range = periodRange(periodKey);
+    var days = [];
+    periodBucketKeys(periodKey).forEach(function (bucketKey) {
+      loadMonth(bucketKey).forEach(function (d) {
+        if (d.date >= range.start && d.date <= range.end) days.push(d);
+      });
+    });
+    days.sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+    return days;
+  }
+
+  function savePeriod(periodKey, days) {
+    var sessionIds = {};
+    Object.keys(periodKnownIds).forEach(function (id) { sessionIds[id] = true; });
+    days.forEach(function (d) { sessionIds[d.id] = true; });
+
+    var bucketsToTouch = {};
+    periodBucketKeys(periodKey).forEach(function (k) { bucketsToTouch[k] = true; });
+    days.forEach(function (d) { bucketsToTouch[d.date.slice(0, 7)] = true; });
+
+    Object.keys(bucketsToTouch).forEach(function (bucketKey) {
+      var existing = loadMonth(bucketKey);
+      var kept = existing.filter(function (d) { return !sessionIds[d.id]; });
+      var mine = days.filter(function (d) { return d.date.slice(0, 7) === bucketKey; });
+      var merged = kept.concat(mine);
+      merged.sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+      try { localStorage.setItem(storageKey(bucketKey), JSON.stringify(merged)); } catch (e) {}
+    });
+  }
+
+  function saveMonth() {
+    var indicator = document.getElementById("saveIndicator");
+    indicator.textContent = "保存中…";
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function () {
+      try {
+        savePeriod(state.monthKey, state.days);
+        localStorage.setItem("kyabakura:last-month", state.monthKey);
+        indicator.textContent = "保存済み";
+        setTimeout(function () { indicator.textContent = ""; }, 1200);
+      } catch (e) {
+        indicator.textContent = "保存に失敗しました";
+      }
+    }, 400);
+  }
+
+  function switchMonth(monthKey) {
+    state.monthKey = monthKey;
+    state.days = loadPeriod(monthKey);
+    periodKnownIds = {};
+    state.days.forEach(markKnownId);
+    draftDay = null;
+    activeDay = null;
+    try { localStorage.setItem("kyabakura:last-month", monthKey); } catch (e) {}
+    render();
+  }
+
+  // ---------- Calendar ----------
+  function anniversariesByMonthDay() {
+    var map = {};
+    loadCustomers().forEach(function (c) {
+      if (c.excluded) return;
+      var label = customerDisplayName(c) || "(名前未設定)";
+      if (c.birthday) {
+        var bp = c.birthday.split("-");
+        var bmd = bp.length === 3 ? bp[1] + "-" + bp[2] : bp.length === 2 ? bp[0] + "-" + bp[1] : null;
+        if (bmd) { (map[bmd] = map[bmd] || []).push({ type: "birthday", name: label, id: c.id }); }
+      }
+      if (c.metDate) {
+        var mp = c.metDate.split("-");
+        var mmd = mp.length === 3 ? mp[1] + "-" + mp[2] : mp.length === 2 ? mp[0] + "-" + mp[1] : null;
+        if (mmd) { (map[mmd] = map[mmd] || []).push({ type: "met", name: label, id: c.id }); }
+      }
+    });
+    return map;
+  }
+
+  function renderAnniversaryList(anniversaries) {
+    var el = document.getElementById("anniversaryList");
+    if (!el) return;
+    if (!anniversaries.length) {
+      el.innerHTML = "";
+      el.style.display = "none";
+      return;
+    }
+    el.style.display = "";
+    el.innerHTML = anniversaries.map(function (a) {
+      var icon = a.type === "birthday" ? "🎂" : "🎉";
+      var kind = a.type === "birthday" ? "誕生日" : "出会った日";
+      var dateParts = a.date.split("-");
+      var dateLabel = Number(dateParts[1]) + "/" + Number(dateParts[2]);
+      return '<div class="anniversary-item" data-customer-id="' + a.id + '">' +
+        '<span class="anniversary-date gothic">' + dateLabel + '</span>' +
+        '<span class="anniversary-icon">' + icon + '</span>' +
+        '<span class="anniversary-name">' + escapeAttr(a.name) + '</span>' +
+        '<span class="anniversary-kind">' + kind + '</span>' +
+      '</div>';
+    }).join("");
+    Array.prototype.forEach.call(el.querySelectorAll(".anniversary-item"), function (item) {
+      item.addEventListener("click", function () {
+        document.getElementById("customersBackdrop").classList.add("open");
+        openCustomerDetail(item.dataset.customerId);
+      });
+    });
+  }
+
+  function renderCalendar() {
+    var wrap = document.getElementById("calendarWrap");
+    if (!wrap) return;
+    var range = periodRange(state.monthKey);
+    var startDate = new Date(range.start + "T00:00:00");
+    var endDate = new Date(range.end + "T00:00:00");
+    var totalDays = Math.round((endDate - startDate) / 86400000) + 1;
+    var firstWeekday = startDate.getDay();
+    var todayS = todayStr();
+
+    var byDate = {};
+    state.days.forEach(function (d) { byDate[d.date] = d; });
+
+    var mdMap = anniversariesByMonthDay();
+    var anniversaries = [];
+
+    var cells = [];
+    for (var i = 0; i < firstWeekday; i++) {
+      cells.push('<div class="cal-cell empty"></div>');
+    }
+    for (var i = 0; i < totalDays; i++) {
+      var d = new Date(startDate);
+      d.setDate(d.getDate() + i);
+      var dateStr = fmtDate(d);
+      var md = dateStr.slice(5);
+      var entry = byDate[dateStr];
+      var cls = "cal-cell";
+      if (entry && entry.worked) cls += " worked";
+      else if (entry) cls += " recorded";
+      if (dateStr === todayS) cls += " today";
+      var dayEvents = mdMap[md] || [];
+      var dotsHtml = "";
+      if (dayEvents.length) {
+        var hasBirthday = false, hasMet = false;
+        dayEvents.forEach(function (ev) {
+          if (ev.type === "birthday") hasBirthday = true;
+          if (ev.type === "met") hasMet = true;
+          anniversaries.push({ date: dateStr, type: ev.type, name: ev.name, id: ev.id });
+        });
+        dotsHtml = '<span class="cal-event-dots">' +
+          (hasBirthday ? '<span class="cal-event-dot birthday"></span>' : '') +
+          (hasMet ? '<span class="cal-event-dot met"></span>' : '') +
+          '</span>';
+      }
+      cells.push('<button type="button" class="' + cls + '" data-date="' + dateStr + '">' + d.getDate() + dotsHtml + '</button>');
+    }
+
+    wrap.innerHTML =
+      '<div class="cal-weekdays">' + WEEKDAYS.map(function (w, idx) {
+        return '<div class="cal-weekday' + (idx === 0 ? " sun" : idx === 6 ? " sat" : "") + '">' + w + '</div>';
+      }).join("") + '</div>' +
+      '<div class="cal-grid">' + cells.join("") + '</div>';
+
+    Array.prototype.forEach.call(wrap.querySelectorAll(".cal-cell[data-date]"), function (btn) {
+      btn.addEventListener("click", function () { onCalendarDateTap(btn.dataset.date); });
+    });
+
+    var rangeLabel = document.getElementById("periodRangeLabel");
+    if (rangeLabel) {
+      var sp = range.start.split("-"), ep = range.end.split("-");
+      rangeLabel.textContent = Number(sp[1]) + "/" + Number(sp[2]) + " 〜 " + Number(ep[1]) + "/" + Number(ep[2]);
+    }
+
+    renderAnniversaryList(anniversaries);
+  }
+
+  function onCalendarDateTap(dateStr) {
+    if (activeDay && activeDay.date === dateStr) {
+      // tapping the already-open date again: close it (discard if it was still an unsaved draft)
+      if (draftDay === activeDay) draftDay = null;
+      activeDay = null;
+      render();
+      return;
+    }
+    var day = state.days.filter(function (d) { return d.date === dateStr; })[0];
+    if (!day) {
+      day = emptyDay(dateStr);
+      draftDay = day;
+    }
+    activeDay = day;
+    render();
+    setTimeout(function () {
+      var el = document.querySelector('.day-card[data-day-id="' + day.id + '"]');
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  }
+
+  // ---------- Rendering ----------
+  function render() {
+    var y = state.monthKey.split("-")[0];
+    var m = state.monthKey.split("-")[1];
+    document.getElementById("monthLabel").textContent = y + "年 " + Number(m) + "月";
+    document.getElementById("summaryEyebrow").textContent = Number(m) + "月の換算";
+    refreshCustomerDatalist();
+
+    var summary = monthSummary(state.days);
+    document.getElementById("conversionValue").textContent = fmt(summary.conversion);
+    document.getElementById("conversionUnit").textContent = "換算 / 出勤" + summary.workedDays + "日";
+    document.getElementById("summarySub").textContent = "合計 " + fmt(summary.grandTotal) + "pt（うちワイン " + fmt(summary.winePoints) + "pt）";
+
+    var nextEl = document.getElementById("summaryNext");
+    if (summary.workedDays > 0) {
+      var nextTarget = summary.conversion + 0.5;
+      var neededRaw = summary.workedDays * nextTarget - summary.grandTotal;
+      var needed = Math.round(neededRaw * 100) / 100;
+      if (needed <= 0.001) {
+        nextEl.className = "summary-next done";
+        nextEl.innerHTML = '次の換算(+0.5)ライン到達済み 🎉';
+      } else {
+        nextEl.className = "summary-next";
+        nextEl.innerHTML = '次の換算(+0.5)まであと <span class="summary-next-strong">' + fmt(needed) + 'pt</span>';
+      }
+      nextEl.style.display = "";
+    } else {
+      nextEl.style.display = "none";
+    }
+
+    var stats = [
+      ["同伴", summary.typeSums["同伴"], ""],
+      ["本指名", summary.typeSums["本指名"], ""],
+      ["指名", summary.typeSums["指名"], ""],
+      ["場内", summary.typeSums["場内"], ""],
+      ["予約", summary.reservation, ""],
+      ["イベント", summary.event, ""],
+      ["六花", summary.rikka, ""],
+      ["入会", summary.nyukai, ""],
+      ["勤務時間", summary.workHours, "h"],
+      ["集客換算", summary.shukyaku, "人"],
+      ["ワイン計", summary.wine, "万円"],
+      ["ワインpt", summary.winePoints, ""]
+    ];
+    var statGrid = document.getElementById("statGrid");
+    statGrid.innerHTML = stats.map(function (s) {
+      return '<div class="stat-chip" data-key="' + s[0] + '" data-unit="' + s[2] + '"><div class="stat-chip-value">' + fmt(s[1]) + '<span class="stat-chip-unit">' + s[2] + '</span></div><div class="stat-chip-label">' + s[0] + '</div></div>';
+    }).join("");
+    Array.prototype.forEach.call(statGrid.querySelectorAll(".stat-chip"), function (chip) {
+      chip.addEventListener("click", function () {
+        openBreakdown(chip.dataset.key, chip.dataset.unit);
+      });
+    });
+
+    var panel = document.getElementById("dayPanel");
+    renderCalendar();
+    panel.innerHTML = "";
+    if (activeDay) {
+      var dayIdx = state.days.indexOf(activeDay);
+      panel.appendChild(renderDayCard(activeDay, dayIdx));
+    }
+  }
+
+  function renderDayCard(day, dayIdx) {
+    var t = dayTotals(day);
+    var w = weekdayOf(day.date);
+    var nibuAllowed = isNibuDay(day.date);
+    var isDraft = day === draftDay;
+
+    var card = document.createElement("div");
+    card.className = "day-card" + (day.worked ? "" : " off");
+    card.dataset.dayId = day.id;
+
+    card.innerHTML =
+      '<div class="day-head">' +
+        '<div class="day-head-left">' +
+          '<input type="date" class="day-date" value="' + day.date + '">' +
+          '<span class="day-weekday' + (w === "土" || w === "日" ? " weekend" : "") + '">' + w + '曜</span>' +
+          (nibuAllowed ? '<span class="nibu-tag">二部対象日</span>' : "") +
+          (isDraft ? '<span class="draft-tag">未保存・情報を入れると追加されます</span>' : "") +
+        '</div>' +
+        '<div class="day-head-right">' +
+          '<div class="day-total gothic">' + fmt(t.sum) + ' pt</div>' +
+          '<button class="icon-btn close-day-btn">✕</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="day-body">' +
+        '<div class="day-meta-row"></div>' +
+        '<div class="customer-list"></div>' +
+        '<div class="day-actions">' +
+          '<button class="ghost-btn add-customer-btn">＋ お客さんを追加</button>' +
+          (isDraft ? '' : '<button class="ghost-btn danger delete-day-btn">削除 この日を削除</button>') +
+        '</div>' +
+        '<div class="day-subtotal-strip">' +
+          '<span>同伴 ' + fmt(t.typeSums["同伴"]) + '</span>' +
+          '<span>本指名 ' + fmt(t.typeSums["本指名"]) + '</span>' +
+          '<span>指名 ' + fmt(t.typeSums["指名"]) + '</span>' +
+          '<span>場内 ' + fmt(t.typeSums["場内"]) + '</span>' +
+          '<span>ワイン ' + fmt(t.wine) + '万円</span>' +
+          '<span>集客 ' + t.shukyaku + '</span>' +
+        '</div>' +
+      '</div>';
+
+    // date change
+    card.querySelector(".day-date").addEventListener("change", function (e) {
+      day.date = e.target.value;
+      commitDraftIfNeeded(day);
+      saveMonth();
+      render();
+    });
+
+    // close panel (discards an untouched draft; just hides an already-saved day)
+    card.querySelector(".close-day-btn").addEventListener("click", function () {
+      if (draftDay === day) draftDay = null;
+      activeDay = null;
+      render();
+    });
+
+    // meta row: worked toggle, workHours, attendancePoints
+    var metaRow = card.querySelector(".day-meta-row");
+    metaRow.appendChild(makeToggle("出勤日として計上", day.worked, null, function (v) { day.worked = v; commitDraftIfNeeded(day); saveMonth(); render(); }));
+    metaRow.appendChild(makeNumberField("勤務時間", day.workHours, 0.25, "h", function (v) { day.workHours = v; commitDraftIfNeeded(day); saveMonth(); render(); }));
+    metaRow.appendChild(makeNumberField("出勤ポイント", day.attendancePoints || 0, 0.5, "", function (v) { day.attendancePoints = v; commitDraftIfNeeded(day); saveMonth(); render(); }));
+
+    // customers
+    var customerList = card.querySelector(".customer-list");
+    day.customers.forEach(function (c, cIdx) {
+      customerList.appendChild(renderCustomerCard(c, day, dayIdx, cIdx));
+    });
+
+    card.querySelector(".add-customer-btn").addEventListener("click", function () {
+      day.customers.push(emptyCustomer());
+      commitDraftIfNeeded(day);
+      saveMonth();
+      render();
+    });
+
+    var deleteBtn = card.querySelector(".delete-day-btn");
+    if (deleteBtn) {
+      deleteBtn.addEventListener("click", function () {
+        state.days.splice(dayIdx, 1);
+        activeDay = null;
+        saveMonth();
+        render();
+      });
+    }
+
+    return card;
+  }
+
+
+  function renderCustomerCard(c, day, dayIdx, cIdx) {
+    var p = customerPoints(c);
+    var nibuAllowed = isNibuDay(day.date);
+
+    var card = document.createElement("div");
+    card.className = "customer-card";
+
+    card.innerHTML =
+      '<div class="customer-head">' +
+        '<div class="customer-name-wrap">' +
+          '<input class="customer-name" autocomplete="off" placeholder="お客さん名" value="' + escapeAttr(c.name) + '">' +
+          '<div class="customer-name-suggest" style="display:none;"></div>' +
+        '</div>' +
+        '<div class="customer-sum gothic">' + fmt(p.sum) + ' pt</div>' +
+        (day.customers.length > 1 ? '<button class="icon-btn delete-customer-btn">✕</button>' : '') +
+      '</div>' +
+      '<div class="type-row"></div>' +
+      '<div class="customer-grid"></div>' +
+      ((c.type === "同伴" || c.type === "本指名") ? '<div class="shukyaku-badge">集客換算 +1</div>' : '');
+
+    var nameInput = card.querySelector(".customer-name");
+    var suggestBox = card.querySelector(".customer-name-suggest");
+
+    function customerAllNames() {
+      var names = [];
+      loadCustomers().forEach(function (cust) {
+        if (cust.excluded) return;
+        var n = customerSuggestName(cust);
+        if (n && names.indexOf(n) === -1) names.push(n);
+      });
+      return names;
+    }
+
+    function showNameSuggestions() {
+      var q = nameInput.value.trim().toLowerCase();
+      var all = customerAllNames();
+      var filtered = q ? all.filter(function (n) { return n.toLowerCase().indexOf(q) !== -1; }) : all;
+      if (!filtered.length) {
+        suggestBox.style.display = "none";
+        suggestBox.innerHTML = "";
+        return;
+      }
+      suggestBox.innerHTML = filtered.map(function (n) {
+        return '<div class="customer-name-suggest-item">' + escapeAttr(n) + '</div>';
+      }).join("");
+      suggestBox.style.display = "";
+    }
+
+    nameInput.addEventListener("focus", showNameSuggestions);
+    nameInput.addEventListener("input", function (e) {
+      c.name = e.target.value;
+      commitDraftIfNeeded(day);
+      saveMonth();
+      showNameSuggestions();
+    });
+    nameInput.addEventListener("blur", function () {
+      setTimeout(function () { suggestBox.style.display = "none"; }, 150);
+    });
+    suggestBox.addEventListener("mousedown", function (e) {
+      e.preventDefault();
+      var item = e.target.closest(".customer-name-suggest-item");
+      if (!item) return;
+      var chosen = item.textContent;
+      nameInput.value = chosen;
+      c.name = chosen;
+      commitDraftIfNeeded(day);
+      saveMonth();
+      suggestBox.style.display = "none";
+    });
+
+    var delBtn = card.querySelector(".delete-customer-btn");
+    if (delBtn) {
+      delBtn.addEventListener("click", function () {
+        day.customers.splice(cIdx, 1);
+        if (day.customers.length === 0) day.customers.push(emptyCustomer());
+        commitDraftIfNeeded(day);
+        saveMonth();
+        render();
+      });
+    }
+
+    var typeRow = card.querySelector(".type-row");
+    TYPE_OPTIONS.forEach(function (t) {
+      var chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "type-chip" + (c.type === t ? " on" : "");
+      chip.innerHTML = t + '<span class="type-chip-pt">' + (TYPE_POINTS[t] ? fmt(TYPE_POINTS[t]) : "0") + '</span>';
+      chip.addEventListener("click", function () {
+        c.type = t;
+        commitDraftIfNeeded(day);
+        saveMonth();
+        render();
+      });
+      typeRow.appendChild(chip);
+    });
+
+    var grid = card.querySelector(".customer-grid");
+    grid.appendChild(makeCycleToggle("予約", p.reservationPt, [0, 0.5, 1.0], function (v) { c.reservation = v; commitDraftIfNeeded(day); saveMonth(); render(); }));
+    grid.appendChild(makeCycleToggle("入会", p.nyukaiPt, [2, 3, 4, 0], function (v) { c.nyukai = v; commitDraftIfNeeded(day); saveMonth(); render(); }));
+    grid.appendChild(makeNumberField("イベント", c.event, 0.5, "", function (v) { c.event = v; commitDraftIfNeeded(day); saveMonth(); render(); }));
+    grid.appendChild(makeNumberField("六花", c.rikka, 0.5, "", function (v) { c.rikka = v; commitDraftIfNeeded(day); saveMonth(); render(); }));
+    grid.appendChild(makeNumberField(nibuAllowed ? "二部" : "二部（月・土のみ）", c.nibu, 0.5, "", function (v) { c.nibu = v; commitDraftIfNeeded(day); saveMonth(); render(); }));
+    grid.appendChild(makeNumberField("ワイン", c.wine, 1, "万円", function (v) { c.wine = v; commitDraftIfNeeded(day); saveMonth(); render(); }));
+
+    return card;
+  }
+
+  function makeToggle(label, checked, points, onChange) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "toggle" + (checked ? " on" : "");
+    btn.innerHTML = '<span class="toggle-dot"></span><span class="toggle-label">' + label + '</span>' +
+      (points != null ? '<span class="toggle-points">' + (checked ? "+" + fmt(points) : "+0.0") + '</span>' : "");
+    btn.addEventListener("click", function () { onChange(!checked); });
+    return btn;
+  }
+
+  function makeCycleToggle(label, value, steps, onChange) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    var current = Number(value) || 0;
+    var idx = steps.indexOf(current);
+    if (idx === -1) idx = 0;
+    btn.className = "toggle" + (current > 0 ? " on" : "");
+    btn.innerHTML = '<span class="toggle-dot"></span><span class="toggle-label">' + label + '</span>' +
+      '<span class="toggle-points">+' + fmt(current) + '</span>';
+    btn.addEventListener("click", function () {
+      var next = steps[(idx + 1) % steps.length];
+      onChange(next);
+    });
+    return btn;
+  }
+
+  function makeNumberField(label, value, step, suffix, onChange) {
+    var wrap = document.createElement("label");
+    wrap.className = "field";
+    wrap.innerHTML = '<span class="field-label">' + label + '</span>' +
+      '<div class="field-input-wrap"><input type="number" class="field-input" value="' + value + '" step="' + step + '" min="0">' +
+      (suffix ? '<span class="field-suffix">' + suffix + '</span>' : '') + '</div>';
+    var input = wrap.querySelector("input");
+    input.addEventListener("focus", function () { input.select(); });
+    input.addEventListener("change", function (e) {
+      var v = e.target.value === "" ? 0 : parseFloat(e.target.value);
+      onChange(v);
+    });
+    return wrap;
+  }
+
+  function escapeAttr(s) {
+    return String(s || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  function shortDate(dateStr) {
+    var parts = dateStr.split("-");
+    if (parts.length < 3) return dateStr;
+    return Number(parts[1]) + "/" + Number(parts[2]);
+  }
+
+  // ---------- Breakdown (stat chip tap) ----------
+  function buildBreakdown(days, key) {
+    var entries = [];
+    days.slice().sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; }).forEach(function (day) {
+      var w = weekdayOf(day.date);
+
+      if (key === "勤務時間") {
+        var wh = Number(day.workHours) || 0;
+        if (wh) entries.push({ date: day.date, weekday: w, name: null, value: wh });
+        return;
+      }
+
+      if (key === "ワイン計" || key === "ワインpt") {
+        day.customers.forEach(function (c) {
+          var wv = Number(c.wine) || 0;
+          if (wv) entries.push({ date: day.date, weekday: w, name: c.name || "(名前未入力)", value: wv });
+        });
+        return;
+      }
+
+      if (key === "イベント") {
+        var ap = Number(day.attendancePoints) || 0;
+        if (ap) entries.push({ date: day.date, weekday: w, name: "出勤ポイント", value: ap });
+      }
+
+      day.customers.forEach(function (c) {
+        var p = customerPoints(c);
+        var v = 0;
+        if (key === "同伴" || key === "本指名" || key === "指名" || key === "場内") {
+          v = c.type === key ? (TYPE_POINTS[key] || 0) : 0;
+        } else if (key === "予約") {
+          v = p.reservationPt;
+        } else if (key === "イベント") {
+          v = p.eventPt;
+        } else if (key === "六花") {
+          v = p.rikkaPt;
+        } else if (key === "入会") {
+          v = p.nyukaiPt;
+        } else if (key === "集客換算") {
+          v = p.shukyaku;
+        }
+        if (v) entries.push({ date: day.date, weekday: w, name: c.name || "(名前未入力)", value: v });
+      });
+    });
+    return entries;
+  }
+
+  function openBreakdown(key, unit) {
+    var entries = buildBreakdown(state.days, key);
+    var total = entries.reduce(function (sum, e) { return sum + e.value; }, 0);
+
+    document.getElementById("breakdownTitle").textContent = key + " の内訳";
+    document.getElementById("breakdownSum").textContent = "合計 " + fmt(total) + unit + "（" + entries.length + "件）";
+
+    var noteEl = document.getElementById("breakdownNote");
+    if (key === "ワインpt") {
+      noteEl.textContent = "ワインptは月間合計額から自動計算のため、内訳は金額（万円）で表示しています。";
+      noteEl.style.display = "";
+    } else {
+      noteEl.textContent = "";
+      noteEl.style.display = "none";
+    }
+
+    var listEl = document.getElementById("breakdownList");
+    if (entries.length === 0) {
+      listEl.innerHTML = '<div class="breakdown-empty">この月はまだ記録がありません</div>';
+    } else {
+      listEl.innerHTML = entries.map(function (e) {
+        return '<div class="breakdown-row">' +
+          '<div class="breakdown-date">' + shortDate(e.date) + '(' + e.weekday + ')</div>' +
+          (e.name ? '<div class="breakdown-name">' + escapeAttr(e.name) + '</div>' : '<div class="breakdown-name"></div>') +
+          '<div class="breakdown-value">+' + fmt(e.value) + unit + '</div>' +
+        '</div>';
+      }).join("");
+    }
+
+    document.getElementById("breakdownBackdrop").classList.add("open");
+  }
+
+  function closeBreakdown() {
+    document.getElementById("breakdownBackdrop").classList.remove("open");
+  }
+
+  document.getElementById("breakdownClose").addEventListener("click", closeBreakdown);
+  document.getElementById("breakdownBackdrop").addEventListener("click", function (e) {
+    if (e.target === e.currentTarget) closeBreakdown();
+  });
+
+  // ---------- Backup (export / import) ----------
+  function allBackupData() {
+    var data = {};
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && k.indexOf("kyabakura:") === 0) data[k] = localStorage.getItem(k);
+      }
+    } catch (e) {}
+    return data;
+  }
+
+  function setBackupStatus(msg, isError) {
+    var el = document.getElementById("backupStatus");
+    el.textContent = msg;
+    el.className = "backup-status" + (isError ? " error" : "");
+  }
+
+  function exportBackup() {
+    try {
+      var data = allBackupData();
+      var payload = { app: "kyabakura-point-calculator", exportedAt: new Date().toISOString(), data: data };
+      var blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = "kyabakura-backup-" + todayStr() + ".json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+      setBackupStatus("書き出しました。「ファイル」に保存してください。", false);
+    } catch (e) {
+      setBackupStatus("書き出しに失敗しました。", true);
+    }
+  }
+
+  function importBackup(file) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      try {
+        var parsed = JSON.parse(e.target.result);
+        var data = parsed && parsed.data ? parsed.data : parsed;
+        var count = 0;
+        Object.keys(data).forEach(function (k) {
+          if (k.indexOf("kyabakura:") === 0) {
+            localStorage.setItem(k, data[k]);
+            count++;
+          }
+        });
+        setBackupStatus(count + "件のデータを読み込みました。", false);
+        state.monthKey = (function () {
+          try { return localStorage.getItem("kyabakura:last-month") || periodKeyFromDate(todayStr()); } catch (e2) { return periodKeyFromDate(todayStr()); }
+        })();
+        state.days = loadPeriod(state.monthKey);
+        periodKnownIds = {};
+        state.days.forEach(markKnownId);
+        render();
+      } catch (err) {
+        setBackupStatus("読み込みに失敗しました。ファイルが壊れている可能性があります。", true);
+      }
+    };
+    reader.onerror = function () { setBackupStatus("ファイルの読み込みに失敗しました。", true); };
+    reader.readAsText(file);
+  }
+
+  document.getElementById("openBackupBtn").addEventListener("click", function () {
+    setBackupStatus("", false);
+    document.getElementById("backupBackdrop").classList.add("open");
+  });
+  document.getElementById("backupClose").addEventListener("click", function () {
+    document.getElementById("backupBackdrop").classList.remove("open");
+  });
+  document.getElementById("backupBackdrop").addEventListener("click", function (e) {
+    if (e.target === e.currentTarget) document.getElementById("backupBackdrop").classList.remove("open");
+  });
+  document.getElementById("exportBtn").addEventListener("click", exportBackup);
+  document.getElementById("importBtn").addEventListener("click", function () {
+    document.getElementById("importFile").click();
+  });
+  document.getElementById("importFile").addEventListener("change", function (e) {
+    var file = e.target.files && e.target.files[0];
+    if (file) importBackup(file);
+    e.target.value = "";
+  });
+
+  // ---------- Share (QR code) ----------
+  function currentShareUrl() {
+    return location.href.split("?")[0].split("#")[0];
+  }
+
+  function renderShareQr() {
+    var url = currentShareUrl();
+    var wrap = document.getElementById("shareQrWrap");
+    try {
+      var qr = null;
+      for (var t = 1; t <= 20; t++) {
+        try {
+          qr = qrcode(t, "M");
+          qr.addData(url);
+          qr.make();
+          break;
+        } catch (inner) {
+          qr = null;
+        }
+      }
+      if (!qr) throw new Error("no fit");
+      wrap.innerHTML = qr.createSvgTag(6, 12);
+    } catch (e) {
+      wrap.innerHTML = '<div class="breakdown-empty">QRコードの生成に失敗しました</div>';
+    }
+  }
+
+  function setShareStatus(msg) {
+    document.getElementById("shareStatus").textContent = msg;
+  }
+
+  document.getElementById("openShareBtn").addEventListener("click", function () {
+    setShareStatus("");
+    renderShareQr();
+    if (navigator.share) {
+      document.getElementById("shareNativeBtn").style.display = "";
+    }
+    document.getElementById("shareBackdrop").classList.add("open");
+  });
+  document.getElementById("shareClose").addEventListener("click", function () {
+    document.getElementById("shareBackdrop").classList.remove("open");
+  });
+  document.getElementById("shareBackdrop").addEventListener("click", function (e) {
+    if (e.target === e.currentTarget) document.getElementById("shareBackdrop").classList.remove("open");
+  });
+  document.getElementById("shareCopyUrlBtn").addEventListener("click", function () {
+    var url = currentShareUrl();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function () {
+        setShareStatus("URLをコピーしました");
+      }).catch(function () {
+        setShareStatus(url);
+      });
+    } else {
+      setShareStatus(url);
+    }
+  });
+  document.getElementById("shareNativeBtn").addEventListener("click", function () {
+    if (navigator.share) {
+      navigator.share({ title: "Point Conversion Table", url: currentShareUrl() }).catch(function () {});
+    }
+  });
+
+  // ---------- Customer list UI ----------
+  var editingCustomerId = null;
+
+  function openCustomerList() {
+    editingCustomerId = null;
+    document.getElementById("customerListView").style.display = "";
+    document.getElementById("customerDetailView").style.display = "none";
+    renderCustomerListView();
+    document.getElementById("customersBackdrop").classList.add("open");
+  }
+
+  function closeCustomerModal() {
+    document.getElementById("customersBackdrop").classList.remove("open");
+  }
+
+  function renderCustomerRow(c) {
+    var agg = customerAggregate(c);
+    var nameLabel = c.nickname || c.fullName || "(名前未設定)";
+    if (c.nickname && c.fullName) nameLabel += "（" + c.fullName + "）";
+    var row = document.createElement("div");
+    row.className = "customer-row";
+    row.innerHTML =
+      '<div>' +
+        '<div class="customer-row-name">' + escapeAttr(nameLabel) + '</div>' +
+        '<div class="customer-row-sub">同伴' + agg.typeCounts["同伴"] + '・本指名' + agg.typeCounts["本指名"] + '・指名' + agg.typeCounts["指名"] + '・場内' + agg.typeCounts["場内"] + '　ワイン計' + fmt(agg.wineTotal) + '万円</div>' +
+      '</div>' +
+      '<div class="customer-row-chevron">›</div>';
+    row.addEventListener("click", function () { openCustomerDetail(c.id); });
+    return row;
+  }
+
+  function customerRankScore(c) {
+    var agg = customerAggregate(c);
+    return {
+      wineTotal: agg.wineTotal,
+      companionCount: agg.typeCounts["同伴"] + agg.typeCounts["指名"]
+    };
+  }
+
+  function sortCustomersByRank(list) {
+    list.sort(function (a, b) {
+      var sa = customerRankScore(a), sb = customerRankScore(b);
+      if (sb.wineTotal !== sa.wineTotal) return sb.wineTotal - sa.wineTotal;
+      if (sb.companionCount !== sa.companionCount) return sb.companionCount - sa.companionCount;
+      return customerDisplayName(a).localeCompare(customerDisplayName(b), "ja");
+    });
+    return list;
+  }
+
+  function renderCustomerListView() {
+    var list = loadCustomers();
+    var active = sortCustomersByRank(list.filter(function (c) { return !c.excluded; }));
+    var excluded = sortCustomersByRank(list.filter(function (c) { return c.excluded; }));
+
+    var el = document.getElementById("customerListEl");
+    el.innerHTML = "";
+    if (active.length === 0) {
+      el.innerHTML = '<div class="customer-empty">まだ顧客が登録されていません</div>';
+    } else {
+      active.forEach(function (c) { el.appendChild(renderCustomerRow(c)); });
+    }
+
+    var excludedSection = document.getElementById("excludedSection");
+    var excludedListEl = document.getElementById("excludedListEl");
+    if (excluded.length === 0) {
+      excludedSection.style.display = "none";
+    } else {
+      excludedSection.style.display = "";
+      document.getElementById("excludedCount").textContent = excluded.length;
+      excludedListEl.innerHTML = "";
+      excluded.forEach(function (c) { excludedListEl.appendChild(renderCustomerRow(c)); });
+    }
+  }
+
+  function populateMonthDaySelect(monthId, dayId) {
+    var monthSel = document.getElementById(monthId);
+    var daySel = document.getElementById(dayId);
+    for (var m = 1; m <= 12; m++) monthSel.appendChild(new Option(String(m), String(m).padStart(2, "0")));
+    for (var d = 1; d <= 31; d++) daySel.appendChild(new Option(String(d), String(d).padStart(2, "0")));
+  }
+  populateMonthDaySelect("cfBirthdayMonth", "cfBirthdayDay");
+
+  function setMonthDaySelects(monthId, dayId, value) {
+    var parts = (value || "").split("-");
+    var mm = "", dd = "";
+    if (parts.length === 2) { mm = parts[0]; dd = parts[1]; }
+    else if (parts.length === 3) { mm = parts[1]; dd = parts[2]; }
+    document.getElementById(monthId).value = mm;
+    document.getElementById(dayId).value = dd;
+  }
+
+  function getMonthDaySelects(monthId, dayId) {
+    var mm = document.getElementById(monthId).value;
+    var dd = document.getElementById(dayId).value;
+    if (!mm || !dd) return "";
+    return mm + "-" + dd;
+  }
+
+  function setBirthdaySelects(value) { setMonthDaySelects("cfBirthdayMonth", "cfBirthdayDay", value); updateBirthdayLabel(); }
+  function getBirthdaySelects() { return getMonthDaySelects("cfBirthdayMonth", "cfBirthdayDay"); }
+
+  function updateBirthdayLabel() {
+    var btn = document.getElementById("cfBirthdayBtn");
+    var v = getBirthdaySelects();
+    if (v) {
+      var parts = v.split("-");
+      btn.textContent = Number(parts[0]) + "月" + Number(parts[1]) + "日";
+    } else {
+      btn.textContent = "選択してください";
+    }
+  }
+
+  var cfBirthdayPopup = document.getElementById("cfBirthdayPopup");
+  document.getElementById("cfBirthdayBtn").addEventListener("click", function (e) {
+    e.stopPropagation();
+    cfBirthdayPopup.style.display = cfBirthdayPopup.style.display === "none" ? "" : "none";
+  });
+  document.getElementById("cfBirthdayMonth").addEventListener("change", updateBirthdayLabel);
+  document.getElementById("cfBirthdayDay").addEventListener("change", updateBirthdayLabel);
+  document.getElementById("cfBirthdayDoneBtn").addEventListener("click", function () {
+    cfBirthdayPopup.style.display = "none";
+  });
+  document.addEventListener("click", function (e) {
+    if (cfBirthdayPopup.style.display === "none") return;
+    if (cfBirthdayPopup.contains(e.target) || e.target.id === "cfBirthdayBtn") return;
+    cfBirthdayPopup.style.display = "none";
+  });
+
+  // ---------- Met date picker (year + month + day) ----------
+  (function populateMetYearSelect() {
+    var yearSel = document.getElementById("cfMetYear");
+    var thisYear = new Date().getFullYear();
+    for (var y = thisYear; y >= thisYear - 25; y--) yearSel.appendChild(new Option(String(y) + "年", String(y)));
+  })();
+  populateMonthDaySelect("cfMetMonth", "cfMetDay");
+
+  function setMetSelects(value) {
+    var parts = (value || "").split("-");
+    var yyyy = "", mm = "", dd = "";
+    if (parts.length === 3) { yyyy = parts[0]; mm = parts[1]; dd = parts[2]; }
+    document.getElementById("cfMetYear").value = yyyy;
+    document.getElementById("cfMetMonth").value = mm;
+    document.getElementById("cfMetDay").value = dd;
+    updateMetLabel();
+  }
+
+  function getMetSelects() {
+    var yyyy = document.getElementById("cfMetYear").value;
+    var mm = document.getElementById("cfMetMonth").value;
+    var dd = document.getElementById("cfMetDay").value;
+    if (!yyyy || !mm || !dd) return "";
+    return yyyy + "-" + mm + "-" + dd;
+  }
+
+  function updateMetLabel() {
+    var btn = document.getElementById("cfMetBtn");
+    var v = getMetSelects();
+    if (v) {
+      var parts = v.split("-");
+      btn.textContent = Number(parts[0]) + "年" + Number(parts[1]) + "月" + Number(parts[2]) + "日";
+    } else {
+      btn.textContent = "選択してください";
+    }
+  }
+
+  var cfMetPopup = document.getElementById("cfMetPopup");
+  document.getElementById("cfMetBtn").addEventListener("click", function (e) {
+    e.stopPropagation();
+    cfMetPopup.style.display = cfMetPopup.style.display === "none" ? "" : "none";
+  });
+  document.getElementById("cfMetYear").addEventListener("change", updateMetLabel);
+  document.getElementById("cfMetMonth").addEventListener("change", updateMetLabel);
+  document.getElementById("cfMetDay").addEventListener("change", updateMetLabel);
+  document.getElementById("cfMetDoneBtn").addEventListener("click", function () {
+    cfMetPopup.style.display = "none";
+  });
+  document.addEventListener("click", function (e) {
+    if (cfMetPopup.style.display === "none") return;
+    if (cfMetPopup.contains(e.target) || e.target.id === "cfMetBtn") return;
+    cfMetPopup.style.display = "none";
+  });
+
+  function setExcludedToggle(value) {
+    var btn = document.getElementById("cfExcludedToggle");
+    btn.classList.toggle("on", !!value);
+    btn.dataset.value = value ? "true" : "false";
+  }
+
+  function getExcludedToggle() {
+    return document.getElementById("cfExcludedToggle").dataset.value === "true";
+  }
+
+  document.getElementById("cfExcludedToggle").addEventListener("click", function () {
+    setExcludedToggle(!getExcludedToggle());
+  });
+
+  function openCustomerDetail(id) {
+    var list = loadCustomers();
+    var c = list.filter(function (x) { return x.id === id; })[0];
+    if (!c) return;
+    editingCustomerId = id;
+    document.getElementById("cfFullName").value = c.fullName || "";
+    document.getElementById("cfNickname").value = c.nickname || "";
+    setMetSelects(c.metDate);
+    setBirthdaySelects(c.birthday);
+    document.getElementById("cfMemo").value = c.memo || "";
+    setExcludedToggle(c.excluded);
+    document.getElementById("cfDeleteBtn").style.display = "";
+    renderCustomerStats(c);
+    document.getElementById("customerListView").style.display = "none";
+    document.getElementById("customerDetailView").style.display = "";
+  }
+
+  function openCustomerAdd() {
+    editingCustomerId = null;
+    document.getElementById("cfFullName").value = "";
+    document.getElementById("cfNickname").value = "";
+    setMetSelects("");
+    setBirthdaySelects("");
+    document.getElementById("cfMemo").value = "";
+    setExcludedToggle(false);
+    document.getElementById("cfDeleteBtn").style.display = "none";
+    document.getElementById("customerStatsEl").innerHTML = "";
+    document.getElementById("customerListView").style.display = "none";
+    document.getElementById("customerDetailView").style.display = "";
+  }
+
+  function renderCustomerStats(customer) {
+    var agg = customerAggregate(customer);
+    var t = agg.typeTotal;
+    var rows = ["同伴", "本指名", "指名", "場内"].map(function (k) {
+      var pct = t ? Math.round((agg.typeCounts[k] / t) * 100) : 0;
+      return '<div class="cs-ratio-row">' +
+        '<div class="cs-ratio-label">' + k + '</div>' +
+        '<div class="cs-ratio-bar"><div class="cs-ratio-fill" style="width:' + pct + '%;"></div></div>' +
+        '<div class="cs-ratio-pct">' + pct + '%</div>' +
+      '</div>';
+    }).join("");
+
+    document.getElementById("customerStatsEl").innerHTML =
+      '<div class="customer-stats-title">通算の記録</div>' +
+      '<div class="cs-grid">' +
+        '<div class="cs-chip"><div class="cs-chip-value">' + agg.visitCount + '</div><div class="cs-chip-label">来店回数</div></div>' +
+        '<div class="cs-chip"><div class="cs-chip-value">' + fmt(agg.wineTotal) + '</div><div class="cs-chip-label">ワイン合計(万円)</div></div>' +
+        '<div class="cs-chip"><div class="cs-chip-value">' + fmt(agg.monthlyWineAvg) + '</div><div class="cs-chip-label">月平均ワイン(万円)</div></div>' +
+      '</div>' +
+      (t ? ('<div class="customer-stats-title">タイプの比率</div>' + rows) : '');
+  }
+
+  document.getElementById("openCustomersBtn").addEventListener("click", openCustomerList);
+  document.getElementById("customersClose").addEventListener("click", closeCustomerModal);
+  document.getElementById("customersBackdrop").addEventListener("click", function (e) {
+    if (e.target === e.currentTarget) closeCustomerModal();
+  });
+  document.getElementById("addCustomerBtn").addEventListener("click", openCustomerAdd);
+  document.getElementById("excludedToggleBtn").addEventListener("click", function () {
+    var listEl = document.getElementById("excludedListEl");
+    var chevron = document.getElementById("excludedChevron");
+    var isOpen = listEl.style.display !== "none";
+    listEl.style.display = isOpen ? "none" : "";
+    chevron.textContent = isOpen ? "▸" : "▾";
+  });
+  document.getElementById("customerBackBtn").addEventListener("click", function () {
+    document.getElementById("customerListView").style.display = "";
+    document.getElementById("customerDetailView").style.display = "none";
+    renderCustomerListView();
+  });
+
+  document.getElementById("cfSaveBtn").addEventListener("click", function () {
+    var fullName = document.getElementById("cfFullName").value.trim();
+    var nickname = document.getElementById("cfNickname").value.trim();
+    if (!fullName && !nickname) {
+      document.getElementById("cfNickname").focus();
+      return;
+    }
+    var excluded = getExcludedToggle();
+    var list = loadCustomers();
+    if (editingCustomerId) {
+      list.forEach(function (c) {
+        if (c.id === editingCustomerId) {
+          c.fullName = fullName;
+          c.nickname = nickname;
+          c.metDate = getMetSelects();
+          c.birthday = getBirthdaySelects();
+          c.memo = document.getElementById("cfMemo").value;
+          c.excluded = excluded;
+        }
+      });
+    } else {
+      list.push({
+        id: uid(),
+        fullName: fullName,
+        nickname: nickname,
+        metDate: getMetSelects(),
+        birthday: getBirthdaySelects(),
+        memo: document.getElementById("cfMemo").value,
+        excluded: excluded
+      });
+    }
+    saveCustomers(list);
+    refreshCustomerDatalist();
+    document.getElementById("customerListView").style.display = "";
+    document.getElementById("customerDetailView").style.display = "none";
+    renderCustomerListView();
+  });
+
+  document.getElementById("cfDeleteBtn").addEventListener("click", function () {
+    if (!editingCustomerId) return;
+    if (!confirm("この顧客をリストから削除しますか？(過去の出勤記録は消えません)")) return;
+    var list = loadCustomers().filter(function (c) { return c.id !== editingCustomerId; });
+    saveCustomers(list);
+    refreshCustomerDatalist();
+    editingCustomerId = null;
+    document.getElementById("customerListView").style.display = "";
+    document.getElementById("customerDetailView").style.display = "none";
+    renderCustomerListView();
+  });
+
+  // ---------- Header menu (hamburger) ----------
+  var menuDropdown = document.getElementById("menuDropdown");
+  document.getElementById("menuBtn").addEventListener("click", function (e) {
+    e.stopPropagation();
+    menuDropdown.classList.toggle("open");
+  });
+  Array.prototype.forEach.call(menuDropdown.querySelectorAll(".menu-item"), function (item) {
+    item.addEventListener("click", function () { menuDropdown.classList.remove("open"); });
+  });
+  document.addEventListener("click", function (e) {
+    if (!menuDropdown.classList.contains("open")) return;
+    if (menuDropdown.contains(e.target) || e.target.id === "menuBtn") return;
+    menuDropdown.classList.remove("open");
+  });
+
+  // ---------- Init ----------
+  function shiftMonth(delta) {
+    var parts = state.monthKey.split("-");
+    var d = new Date(Number(parts[0]), Number(parts[1]) - 1 + delta, 1);
+    switchMonth(d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0"));
+  }
+
+  // ---------- Swipe anywhere to change month ----------
+  (function setupPageSwipe() {
+    var startX = 0, startY = 0, tracking = false;
+
+    function isBlocked(target) {
+      if (document.querySelector(".modal-backdrop.open")) return true;
+      if (menuDropdown.classList.contains("open")) return true;
+      var tag = target.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") return true;
+      if (target.closest && target.closest(".customer-name-suggest")) return true;
+      return false;
+    }
+
+    document.addEventListener("touchstart", function (e) {
+      if (e.touches.length !== 1) return;
+      if (isBlocked(e.target)) { tracking = false; return; }
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      tracking = true;
+    }, { passive: true });
+
+    document.addEventListener("touchend", function (e) {
+      if (!tracking) return;
+      tracking = false;
+      var endX = e.changedTouches[0].clientX;
+      var endY = e.changedTouches[0].clientY;
+      var dx = endX - startX;
+      var dy = endY - startY;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        shiftMonth(dx < 0 ? 1 : -1);
+      }
+    }, { passive: true });
+
+    document.addEventListener("touchcancel", function () { tracking = false; }, { passive: true });
+  })();
+
+  (function init() {
+    var lastMonth = null;
+    try { lastMonth = localStorage.getItem("kyabakura:last-month"); } catch (e) {}
+    state.monthKey = lastMonth || periodKeyFromDate(todayStr());
+    state.days = loadPeriod(state.monthKey);
+    periodKnownIds = {};
+    state.days.forEach(markKnownId);
+    render();
+  })();
+})();
+</script>
+</body>
+</html>
